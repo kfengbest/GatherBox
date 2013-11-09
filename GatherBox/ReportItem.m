@@ -15,8 +15,28 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
+
+        
     }
     return self;
+}
+
+-(void) init
+{
+    int iconW = 90;
+    int iconH = 90;
+    int num = 10;
+    
+    self.mScrollView.contentSize = CGSizeMake(iconW * num,iconH * num);
+
+    for (int i = 0; i < num; i++) {
+        
+        UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(iconW * i, 0, iconW, iconH)];
+        imageView.image = [UIImage imageNamed: @"image-holder.png"];
+        [self.mScrollView addSubview:imageView];
+        
+    }
 }
 
 /*

@@ -15,4 +15,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *mDateLabel;
 @property (nonatomic, strong) IBOutlet UILabel *mNumLabel;
 
+-(void) init;
+
 @end
