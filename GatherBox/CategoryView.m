@@ -16,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor purpleColor];
+        self.backgroundColor = [UIColor whiteColor];
 
         for (int j = 0; j < 3; j++) {
             NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];

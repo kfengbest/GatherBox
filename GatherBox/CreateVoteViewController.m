@@ -55,6 +55,7 @@
         [self.view addSubview:cal];
         cal.mParent = self;
         cal.mIndex = j;
+        [cal setDate: [NSDate date]];
     }
     
     mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 570, 320, 250)];
