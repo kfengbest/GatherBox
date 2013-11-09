@@ -322,10 +322,10 @@
             </objects>
             <point key="canvasLocation" x="-1214" y="1909"/>
         </scene>
-        <!--View Controller-->
+        <!--View Report View Controller-->
         <scene sceneID="KTz-L5-TB9">
             <objects>
-                <viewController id="nWP-dt-it5" sceneMemberID="viewController">
+                <viewController id="nWP-dt-it5" customClass="ViewReportViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jFm-Hf-QJQ"/>
                         <viewControllerLayoutGuide type="bottom" id="lQL-SC-M4m"/>
@@ -333,33 +333,13 @@
                     <view key="view" contentMode="scaleToFill" id="ipn-kD-xz8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snq-bg-8OA">
-                                <rect key="frame" x="0.0" y="111" width="320" height="98"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZW3-MM-s44">
-                                <rect key="frame" x="0.0" y="255" width="320" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8W-k4-kEs">
-                                <rect key="frame" x="0.0" y="419" width="320" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-l7-gTf">
-                                <rect key="frame" x="20" y="82" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AQF-hT-dT9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT2-M6-k1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-827" y="1228"/>
+            <point key="canvasLocation" x="-795" y="1228"/>
         </scene>
         <!--Create Vote View Controller - Item 2-->
         <scene sceneID="BwW-Iv-3gX">

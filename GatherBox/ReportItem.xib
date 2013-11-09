@@ -6,25 +6,48 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="9Zl-Y7-QU2">
+        <view contentMode="scaleToFill" id="9Zl-Y7-QU2" customClass="ReportItem">
             <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-x0-Gkk">
-                    <rect key="frame" x="0.0" y="42" width="320" height="88"/>
+                    <rect key="frame" x="-5" y="42" width="330" height="88"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </scrollView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-jn-gMX">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="K9B-jn-gMX">
                     <rect key="frame" x="0.0" y="15" width="118" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-A9-H2I">
-                    <rect key="frame" x="211" y="15" width="109" height="29"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-A9-H2I">
+                    <rect key="frame" x="212" y="15" width="109" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAB-hK-WD1">
+                    <rect key="frame" x="0.0" y="23" width="118" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOz-rz-2lt">
+                    <rect key="frame" x="212" y="23" width="108" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mDateImage" destination="K9B-jn-gMX" id="RZb-2U-YSo"/>
+                <outlet property="mDateLabel" destination="tAB-hK-WD1" id="EOO-ff-yj4"/>
+                <outlet property="mNumImage" destination="t2K-A9-H2I" id="K8j-7s-3pL"/>
+                <outlet property="mNumLabel" destination="lOz-rz-2lt" id="uaH-kl-lMA"/>
+                <outlet property="mScrollView" destination="BSV-x0-Gkk" id="ile-Vl-NT6"/>
+            </connections>
         </view>
     </objects>
+    <resources>
+        <image name="green-bg.png" width="154" height="31"/>
+        <image name="red-bg.png" width="154" height="31"/>
+    </resources>
 </document>

@@ -22,6 +22,8 @@
 		12BDAA80182EE3CD00A61194 /* green-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA74182EE3CD00A61194 /* green-bg.png */; };
 		12BDAA81182EE3CD00A61194 /* grey-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA75182EE3CD00A61194 /* grey-bg.png */; };
 		12BDAA82182EE3CD00A61194 /* red-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA76182EE3CD00A61194 /* red-bg.png */; };
+		12BDAA85182EE48F00A61194 /* ReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA84182EE48F00A61194 /* ReportItem.m */; };
+		12BDAA88182EE6A000A61194 /* ViewReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA87182EE6A000A61194 /* ViewReportViewController.m */; };
 		12D1E1EB182DF7C1003E767E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EA182DF7C1003E767E /* Foundation.framework */; };
 		12D1E1ED182DF7C1003E767E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */; };
 		12D1E1EF182DF7C1003E767E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EE182DF7C1003E767E /* UIKit.framework */; };
@@ -126,6 +128,10 @@
 		12BDAA74182EE3CD00A61194 /* green-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-bg.png"; sourceTree = "<group>"; };
 		12BDAA75182EE3CD00A61194 /* grey-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-bg.png"; sourceTree = "<group>"; };
 		12BDAA76182EE3CD00A61194 /* red-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-bg.png"; sourceTree = "<group>"; };
+		12BDAA83182EE48F00A61194 /* ReportItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportItem.h; sourceTree = "<group>"; };
+		12BDAA84182EE48F00A61194 /* ReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportItem.m; sourceTree = "<group>"; };
+		12BDAA86182EE6A000A61194 /* ViewReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewReportViewController.h; sourceTree = "<group>"; };
+		12BDAA87182EE6A000A61194 /* ViewReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewReportViewController.m; sourceTree = "<group>"; };
 		12D1E1E7182DF7C1003E767E /* GatherBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D1E1EA182DF7C1003E767E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -320,6 +326,10 @@
 				12BDAA66182EA68700A61194 /* VotingViewController.h */,
 				12BDAA67182EA68700A61194 /* VotingViewController.m */,
 				12BDAA69182EE0E300A61194 /* ReportItem.xib */,
+				12BDAA83182EE48F00A61194 /* ReportItem.h */,
+				12BDAA84182EE48F00A61194 /* ReportItem.m */,
+				12BDAA86182EE6A000A61194 /* ViewReportViewController.h */,
+				12BDAA87182EE6A000A61194 /* ViewReportViewController.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -649,9 +659,11 @@
 				12D1E26F182E1493003E767E /* EIOperationManager.m in Sources */,
 				12D1E284182E2D7C003E767E /* UIImage+ImageEffects.m in Sources */,
 				12D1E285182E2D7C003E767E /* UINavigationController+MHDismissModalView.m in Sources */,
+				12BDAA85182EE48F00A61194 /* ReportItem.m in Sources */,
 				12BDAA65182EA0C400A61194 /* DashboardViewController.m in Sources */,
 				12D1E26E182E1493003E767E /* EIImagePickerDelegate.m in Sources */,
 				12D1E270182E1493003E767E /* NSData+Storage.m in Sources */,
+				12BDAA88182EE6A000A61194 /* ViewReportViewController.m in Sources */,
 				12D1E288182E2F33003E767E /* AddFriendsViewController.m in Sources */,
 				12D1E2D1182E6047003E767E /* ChooseDateTimeView.m in Sources */,
 				12D1E260182E1112003E767E /* CreateVoteViewController.m in Sources */,
