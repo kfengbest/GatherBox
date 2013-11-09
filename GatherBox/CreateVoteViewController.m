@@ -44,17 +44,16 @@
 	// Do any additional setup after loading the view.
     
     addedPicArray =[[NSMutableArray alloc]init];
-    [self refreshScrollView];
     
     
-    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 480, 320, 200)];
-    [self.view addSubview:mCategoryView];
+//    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 480, 320, 200)];
+//    [self.view addSubview:mCategoryView];
     
 
     for (int j = 0; j < 3; j++) {
         NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
         CalendarViewItem * cal = (CalendarViewItem*)[nibView objectAtIndex:0];
-        [cal setFrame:CGRectMake(98*j, 160, 98, 194)];
+        [cal setFrame:CGRectMake(98*j, 150, 98, 194)];
         [self.view addSubview:cal];
     }
     
@@ -80,71 +79,32 @@
     }];
 }
 
-
-
-- (IBAction)clearPics:(id)sender {
-    for (UIImageView *img in addedPicArray)
-    {
-        [img removeFromSuperview];
-    }
-    [addedPicArray removeAllObjects];
-    
-    CABasicAnimation *positionAnim=[CABasicAnimation animationWithKeyPath:@"position"];
-    [positionAnim setFromValue:[NSValue valueWithCGPoint:CGPointMake(_plusButton.center.x, _plusButton.center.y)]];
-    [positionAnim setToValue:[NSValue valueWithCGPoint:CGPointMake(INSETS+PIC_WIDTH/2, _plusButton.center.y)]];
-    [positionAnim setDelegate:self];
-    [positionAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-    [positionAnim setDuration:0.25f];
-    
-    [_plusButton.layer addAnimation:positionAnim forKey:nil];
-    
-    [_plusButton setCenter:CGPointMake(INSETS+PIC_WIDTH/2, _plusButton.center.y)];
-    [self refreshScrollView];
-}
-
-- (IBAction)addPic:(id)sender {
-    
-    
-    CABasicAnimation *positionAnim=[CABasicAnimation animationWithKeyPath:@"position"];
-    [positionAnim setFromValue:[NSValue valueWithCGPoint:CGPointMake(_plusButton.center.x, _plusButton.center.y)]];
-    [positionAnim setToValue:[NSValue valueWithCGPoint:CGPointMake(_plusButton.center.x+INSETS+PIC_WIDTH, _plusButton.center.y)]];
-    [positionAnim setDelegate:self];
-    [positionAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-    [positionAnim setDuration:0.25f];
-    [_plusButton.layer addAnimation:positionAnim forKey:nil];
-    [_plusButton setCenter:CGPointMake(_plusButton.center.x+INSETS+PIC_WIDTH, _plusButton.center.y)];
-    
-    UIImageView *aImageView=[[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"boy"]]autorelease];
-    [aImageView setFrame:CGRectMake(INSETS-90, INSETS, PIC_WIDTH, PIC_HEIGHT)];
-    [addedPicArray addObject:aImageView];
-    [_picScroller addSubview:aImageView];
-    
-    for (UIImageView *img in addedPicArray) {
-        
-        CABasicAnimation *positionAnim=[CABasicAnimation animationWithKeyPath:@"position"];
-        [positionAnim setFromValue:[NSValue valueWithCGPoint:CGPointMake(img.center.x, img.center.y)]];
-        [positionAnim setToValue:[NSValue valueWithCGPoint:CGPointMake(img.center.x+INSETS+PIC_WIDTH, img.center.y)]];
-        [positionAnim setDelegate:self];
-        [positionAnim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-        [positionAnim setDuration:0.25f];
-        [img.layer addAnimation:positionAnim forKey:nil];
-        
-        [img setCenter:CGPointMake(img.center.x+INSETS+PIC_WIDTH, img.center.y)];
-    }
-    
-    
-    
-    [self refreshScrollView];
-}
-
-- (void)refreshScrollView
+-(NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
 {
-    CGFloat width=100*(addedPicArray.count)<300?320:100+addedPicArray.count*90;
-    
-    CGSize contentSize=CGSizeMake(width, 100);
-    [_picScroller setContentSize:contentSize];
-    [_picScroller setContentOffset:CGPointMake(width<320?0:width-320, 0) animated:YES];
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 15; //[fileThumbnails count];
     
 }
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *myCell = [collectionView
+                                    dequeueReusableCellWithReuseIdentifier:@"AttendeeCell"
+                                    forIndexPath:indexPath];
+    
+    //NSString* path = fileThumbnails[indexPath.row];
+  //  UIImage *img = [UIImage imageNamed:@"Cell.png"];
+    
+  //  myCell.layer.contents = (id)img.CGImage;
+    
+    return myCell;
+}
+
+
+
 
 @end

@@ -9,18 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface CreateVoteViewController : UIViewController
+@interface CreateVoteViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
     NSMutableArray *addedPicArray;
 }
 @property (nonatomic, strong) UIButton *buttonWithImage;
-
-
-@property (retain, nonatomic) IBOutlet UIScrollView *picScroller;
-@property (retain, nonatomic) IBOutlet UIButton *plusButton;
-
-- (IBAction)clearPics:(id)sender;
-- (IBAction)addPic:(id)sender;
 
 - (IBAction)selectCategory:(id)sender;
 
