@@ -44,6 +44,9 @@
 		12D1E276182E1B8F003E767E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E275182E1B8F003E767E /* QuartzCore.framework */; };
 		12D1E278182E1CC6003E767E /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E277182E1CC6003E767E /* boy.png */; };
 		12D1E27E182E209E003E767E /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E27D182E209E003E767E /* CategoryView.m */; };
+		12D1E284182E2D7C003E767E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E281182E2D7C003E767E /* UIImage+ImageEffects.m */; };
+		12D1E285182E2D7C003E767E /* UINavigationController+MHDismissModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E283182E2D7C003E767E /* UINavigationController+MHDismissModalView.m */; };
+		12D1E288182E2F33003E767E /* AddFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E287182E2F33003E767E /* AddFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,12 @@
 		12D1E277182E1CC6003E767E /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
 		12D1E27C182E209E003E767E /* CategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryView.h; sourceTree = "<group>"; };
 		12D1E27D182E209E003E767E /* CategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryView.m; sourceTree = "<group>"; };
+		12D1E280182E2D7C003E767E /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		12D1E281182E2D7C003E767E /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		12D1E282182E2D7C003E767E /* UINavigationController+MHDismissModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MHDismissModalView.h"; sourceTree = "<group>"; };
+		12D1E283182E2D7C003E767E /* UINavigationController+MHDismissModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MHDismissModalView.m"; sourceTree = "<group>"; };
+		12D1E286182E2F33003E767E /* AddFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendsViewController.h; sourceTree = "<group>"; };
+		12D1E287182E2F33003E767E /* AddFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +185,7 @@
 		12D1E1F0182DF7C1003E767E /* GatherBox */ = {
 			isa = PBXGroup;
 			children = (
+				12D1E27F182E2D7C003E767E /* PushControllers */,
 				12D1E261182E1493003E767E /* EssentialImager */,
 				12D1E248182E059D003E767E /* EGOImageLoading */,
 				12D1E240182E0362003E767E /* JSONKit */,
@@ -195,6 +205,8 @@
 				12D1E25F182E1112003E767E /* CreateVoteViewController.m */,
 				12D1E27C182E209E003E767E /* CategoryView.h */,
 				12D1E27D182E209E003E767E /* CategoryView.m */,
+				12D1E286182E2F33003E767E /* AddFriendsViewController.h */,
+				12D1E287182E2F33003E767E /* AddFriendsViewController.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -318,6 +330,17 @@
 			path = StandardPaths;
 			sourceTree = "<group>";
 		};
+		12D1E27F182E2D7C003E767E /* PushControllers */ = {
+			isa = PBXGroup;
+			children = (
+				12D1E280182E2D7C003E767E /* UIImage+ImageEffects.h */,
+				12D1E281182E2D7C003E767E /* UIImage+ImageEffects.m */,
+				12D1E282182E2D7C003E767E /* UINavigationController+MHDismissModalView.h */,
+				12D1E283182E2D7C003E767E /* UINavigationController+MHDismissModalView.m */,
+			);
+			path = PushControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,9 +447,12 @@
 			files = (
 				12D1E226182DF86B003E767E /* ImageViewCell.m in Sources */,
 				12D1E26F182E1493003E767E /* EIOperationManager.m in Sources */,
+				12D1E284182E2D7C003E767E /* UIImage+ImageEffects.m in Sources */,
 				12D1E227182DF86B003E767E /* VoteViewController.m in Sources */,
+				12D1E285182E2D7C003E767E /* UINavigationController+MHDismissModalView.m in Sources */,
 				12D1E26E182E1493003E767E /* EIImagePickerDelegate.m in Sources */,
 				12D1E270182E1493003E767E /* NSData+Storage.m in Sources */,
+				12D1E288182E2F33003E767E /* AddFriendsViewController.m in Sources */,
 				12D1E260182E1112003E767E /* CreateVoteViewController.m in Sources */,
 				12D1E204182DF7C1003E767E /* ViewController.m in Sources */,
 				12D1E258182E059D003E767E /* EGOCache.m in Sources */,

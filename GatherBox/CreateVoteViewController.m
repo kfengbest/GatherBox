@@ -7,13 +7,16 @@
 //
 
 #import "CreateVoteViewController.h"
+#import "CategoryView.h"
 
 #define  PIC_WIDTH 80
 #define  PIC_HEIGHT 80
 #define  INSETS 10
 
 @interface CreateVoteViewController ()
-
+{
+    CategoryView*   mCategoryView;
+}
 @end
 
 @implementation CreateVoteViewController
@@ -39,6 +42,9 @@
     addedPicArray =[[NSMutableArray alloc]init];
     [self refreshScrollView];
     
+    
+    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 480, 320, 200)];
+    [self.view addSubview:mCategoryView];
     
     // show how a button looks with returned image set as button image without resizing
     self.buttonWithImage = [[UIButton alloc] initWithFrame:CGRectMake(20, 10, 120, 120)];
@@ -81,7 +87,10 @@
 
 - (void)selectCategory
 {
-
+    [UIView beginAnimations:@"ShowCategory" context:nil];
+    [UIView setAnimationDuration:0.5];
+    mCategoryView.frame = CGRectMake(0, 200, 320, 200);
+    [UIView commitAnimations];
 }
 
 
