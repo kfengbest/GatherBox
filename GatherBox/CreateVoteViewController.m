@@ -12,6 +12,7 @@
 #import "UINavigationController+MHDismissModalView.h"
 #import "AddFriendsViewController.h"
 #import "CalendarViewItem.h"
+#import "ChooseDateTimeView.h"
 
 
 #define  PIC_WIDTH 80
@@ -21,6 +22,8 @@
 @interface CreateVoteViewController ()
 {
     CategoryView*   mCategoryView;
+    ChooseDateTimeView * mChooseDateTimeView;
+    
 }
 @end
 
@@ -44,19 +47,21 @@
 	// Do any additional setup after loading the view.
     
     addedPicArray =[[NSMutableArray alloc]init];
-    
-    
-//    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 480, 320, 200)];
-//    [self.view addSubview:mCategoryView];
-    
 
     for (int j = 0; j < 3; j++) {
         NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
         CalendarViewItem * cal = (CalendarViewItem*)[nibView objectAtIndex:0];
         [cal setFrame:CGRectMake(98*j, 150, 98, 194)];
         [self.view addSubview:cal];
+        cal.mParent = self;
+        cal.mIndex = j;
     }
     
+    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 570, 320, 250)];
+    [self.view addSubview:mCategoryView];
+    
+    mChooseDateTimeView = [[ChooseDateTimeView alloc] initWithFrame:CGRectMake(0, 570, 320, 250)];
+    [self.view addSubview:mChooseDateTimeView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,16 +72,19 @@
 
 - (IBAction)selectCategory:(id)sender
 {
-    //    [UIView beginAnimations:@"ShowCategory" context:nil];
-    //    [UIView setAnimationDuration:0.5];
-    //    mCategoryView.frame = CGRectMake(0, 200, 320, 200);
-    //    [UIView commitAnimations];
-    
     AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
     [self presentViewController:nav animated:YES completion:^{
         
     }];
+}
+
+- (void) clickOnCalendar: (NSInteger)index
+{
+    [UIView beginAnimations:@"ShowCategory" context:nil];
+    [UIView setAnimationDuration:0.5];
+    mChooseDateTimeView.frame = CGRectMake(0, 568-250, 320, 250);
+    [UIView commitAnimations];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
@@ -102,6 +110,18 @@
   //  myCell.layer.contents = (id)img.CGImage;
     
     return myCell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    int x = indexPath.row;
+    NSLog(@"%d", x);
+    if (x == 14) {
+        [UIView beginAnimations:@"ShowCategory" context:nil];
+        [UIView setAnimationDuration:0.5];
+        mCategoryView.frame = CGRectMake(0, 568-250, 320, 250);
+        [UIView commitAnimations];
+    }
 }
 
 

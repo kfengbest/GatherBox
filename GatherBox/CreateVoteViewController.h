@@ -16,5 +16,6 @@
 @property (nonatomic, strong) UIButton *buttonWithImage;
 
 - (IBAction)selectCategory:(id)sender;
+- (void) clickOnCalendar: (NSInteger)index;
 
 @end

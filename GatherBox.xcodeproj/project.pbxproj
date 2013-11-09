@@ -79,6 +79,7 @@
 		12D1E2CC182E4EDA003E767E /* step2-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E2C0182E4EDA003E767E /* step2-selected@2x.png */; };
 		12D1E2CD182E4EDA003E767E /* step3-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E2C1182E4EDA003E767E /* step3-selected.png */; };
 		12D1E2CE182E4EDA003E767E /* step3-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E2C2182E4EDA003E767E /* step3-selected@2x.png */; };
+		12D1E2D1182E6047003E767E /* ChooseDateTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +190,8 @@
 		12D1E2C0182E4EDA003E767E /* step2-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step2-selected@2x.png"; sourceTree = "<group>"; };
 		12D1E2C1182E4EDA003E767E /* step3-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step3-selected.png"; sourceTree = "<group>"; };
 		12D1E2C2182E4EDA003E767E /* step3-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step3-selected@2x.png"; sourceTree = "<group>"; };
+		12D1E2CF182E6047003E767E /* ChooseDateTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseDateTimeView.h; sourceTree = "<group>"; };
+		12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseDateTimeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +278,8 @@
 				12D1E2B2182E46BF003E767E /* CalendarView.xib */,
 				12D1E2B4182E48BE003E767E /* CalendarViewItem.h */,
 				12D1E2B5182E48BE003E767E /* CalendarViewItem.m */,
+				12D1E2CF182E6047003E767E /* ChooseDateTimeView.h */,
+				12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -582,6 +587,7 @@
 				12D1E26E182E1493003E767E /* EIImagePickerDelegate.m in Sources */,
 				12D1E270182E1493003E767E /* NSData+Storage.m in Sources */,
 				12D1E288182E2F33003E767E /* AddFriendsViewController.m in Sources */,
+				12D1E2D1182E6047003E767E /* ChooseDateTimeView.m in Sources */,
 				12D1E260182E1112003E767E /* CreateVoteViewController.m in Sources */,
 				12D1E2B6182E48BE003E767E /* CalendarViewItem.m in Sources */,
 				12D1E204182DF7C1003E767E /* ViewController.m in Sources */,

@@ -34,7 +34,7 @@
 {
     [UIView beginAnimations:@"hide" context:nil];
     [UIView setAnimationDuration:0.5];
-    self.frame = CGRectMake(1024, 0, 0, 768);
+    self.frame = CGRectMake(0, 600, 320, 480);
     [UIView commitAnimations];
 }
 @end
