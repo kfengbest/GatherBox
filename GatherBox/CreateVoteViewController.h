@@ -22,7 +22,6 @@
 - (IBAction)clearPics:(id)sender;
 - (IBAction)addPic:(id)sender;
 
-- (void)selectCategory;
-
+- (IBAction)selectCategory:(id)sender;
 
 @end

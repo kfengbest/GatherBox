@@ -11,6 +11,8 @@
 #import "UIImage+ImageEffects.h"
 #import "UINavigationController+MHDismissModalView.h"
 #import "AddFriendsViewController.h"
+#import "CalendarViewItem.h"
+
 
 #define  PIC_WIDTH 80
 #define  PIC_HEIGHT 80
@@ -49,6 +51,12 @@
     [self.view addSubview:mCategoryView];
     
 
+    for (int j = 0; j < 3; j++) {
+        NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+        CalendarViewItem * cal = (CalendarViewItem*)[nibView objectAtIndex:0];
+        [cal setFrame:CGRectMake(98*j, 160, 98, 194)];
+        [self.view addSubview:cal];
+    }
     
 }
 
@@ -58,20 +66,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)selectCategory
+- (IBAction)selectCategory:(id)sender
 {
-//    [UIView beginAnimations:@"ShowCategory" context:nil];
-//    [UIView setAnimationDuration:0.5];
-//    mCategoryView.frame = CGRectMake(0, 200, 320, 200);
-//    [UIView commitAnimations];
+    //    [UIView beginAnimations:@"ShowCategory" context:nil];
+    //    [UIView setAnimationDuration:0.5];
+    //    mCategoryView.frame = CGRectMake(0, 200, 320, 200);
+    //    [UIView commitAnimations];
     
     AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
     [self presentViewController:nav animated:YES completion:^{
         
     }];
-    
 }
+
 
 
 - (IBAction)clearPics:(id)sender {
