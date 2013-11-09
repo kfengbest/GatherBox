@@ -34,6 +34,16 @@
 		12D1E25B182E059D003E767E /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E252182E059D003E767E /* EGOImageLoadConnection.m */; };
 		12D1E25C182E059D003E767E /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E254182E059D003E767E /* EGOImageLoader.m */; };
 		12D1E25D182E059D003E767E /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E257182E059D003E767E /* EGOImageView.m */; };
+		12D1E260182E1112003E767E /* CreateVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E25F182E1112003E767E /* CreateVoteViewController.m */; };
+		12D1E26E182E1493003E767E /* EIImagePickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E263182E1493003E767E /* EIImagePickerDelegate.m */; };
+		12D1E26F182E1493003E767E /* EIOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E265182E1493003E767E /* EIOperationManager.m */; };
+		12D1E270182E1493003E767E /* NSData+Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E268182E1493003E767E /* NSData+Storage.m */; };
+		12D1E271182E1493003E767E /* StandardPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E26B182E1493003E767E /* StandardPaths.m */; };
+		12D1E272182E1493003E767E /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E26D182E1493003E767E /* UIImage+Resize.m */; };
+		12D1E274182E18EE003E767E /* plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E273182E18EE003E767E /* plus_icon.png */; };
+		12D1E276182E1B8F003E767E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E275182E1B8F003E767E /* QuartzCore.framework */; };
+		12D1E278182E1CC6003E767E /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E277182E1CC6003E767E /* boy.png */; };
+		12D1E27E182E209E003E767E /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E27D182E209E003E767E /* CategoryView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +97,24 @@
 		12D1E254182E059D003E767E /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
 		12D1E256182E059D003E767E /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		12D1E257182E059D003E767E /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		12D1E25E182E1112003E767E /* CreateVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateVoteViewController.h; sourceTree = "<group>"; };
+		12D1E25F182E1112003E767E /* CreateVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateVoteViewController.m; sourceTree = "<group>"; };
+		12D1E262182E1493003E767E /* EIImagePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIImagePickerDelegate.h; sourceTree = "<group>"; };
+		12D1E263182E1493003E767E /* EIImagePickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIImagePickerDelegate.m; sourceTree = "<group>"; };
+		12D1E264182E1493003E767E /* EIOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIOperationManager.h; sourceTree = "<group>"; };
+		12D1E265182E1493003E767E /* EIOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIOperationManager.m; sourceTree = "<group>"; };
+		12D1E266182E1493003E767E /* EssentialImager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EssentialImager.h; sourceTree = "<group>"; };
+		12D1E267182E1493003E767E /* NSData+Storage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Storage.h"; sourceTree = "<group>"; };
+		12D1E268182E1493003E767E /* NSData+Storage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Storage.m"; sourceTree = "<group>"; };
+		12D1E26A182E1493003E767E /* StandardPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardPaths.h; sourceTree = "<group>"; };
+		12D1E26B182E1493003E767E /* StandardPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardPaths.m; sourceTree = "<group>"; };
+		12D1E26C182E1493003E767E /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		12D1E26D182E1493003E767E /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		12D1E273182E18EE003E767E /* plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_icon.png; sourceTree = "<group>"; };
+		12D1E275182E1B8F003E767E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		12D1E277182E1CC6003E767E /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
+		12D1E27C182E209E003E767E /* CategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryView.h; sourceTree = "<group>"; };
+		12D1E27D182E209E003E767E /* CategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D1E276182E1B8F003E767E /* QuartzCore.framework in Frameworks */,
 				12D1E1ED182DF7C1003E767E /* CoreGraphics.framework in Frameworks */,
 				12D1E1EF182DF7C1003E767E /* UIKit.framework in Frameworks */,
 				12D1E1EB182DF7C1003E767E /* Foundation.framework in Frameworks */,
@@ -135,6 +164,7 @@
 		12D1E1E9182DF7C1003E767E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12D1E275182E1B8F003E767E /* QuartzCore.framework */,
 				12D1E1EA182DF7C1003E767E /* Foundation.framework */,
 				12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */,
 				12D1E1EE182DF7C1003E767E /* UIKit.framework */,
@@ -146,6 +176,7 @@
 		12D1E1F0182DF7C1003E767E /* GatherBox */ = {
 			isa = PBXGroup;
 			children = (
+				12D1E261182E1493003E767E /* EssentialImager */,
 				12D1E248182E059D003E767E /* EGOImageLoading */,
 				12D1E240182E0362003E767E /* JSONKit */,
 				12D1E222182DF86B003E767E /* ImageViewCell.h */,
@@ -160,6 +191,10 @@
 				12D1E203182DF7C1003E767E /* ViewController.m */,
 				12D1E205182DF7C1003E767E /* Images.xcassets */,
 				12D1E1F1182DF7C1003E767E /* Supporting Files */,
+				12D1E25E182E1112003E767E /* CreateVoteViewController.h */,
+				12D1E25F182E1112003E767E /* CreateVoteViewController.m */,
+				12D1E27C182E209E003E767E /* CategoryView.h */,
+				12D1E27D182E209E003E767E /* CategoryView.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -167,6 +202,8 @@
 		12D1E1F1182DF7C1003E767E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12D1E277182E1CC6003E767E /* boy.png */,
+				12D1E273182E18EE003E767E /* plus_icon.png */,
 				12D1E228182DF98D003E767E /* Cell.png */,
 				12D1E1F2182DF7C1003E767E /* GatherBox-Info.plist */,
 				12D1E1F3182DF7C1003E767E /* InfoPlist.strings */,
@@ -255,6 +292,32 @@
 			path = EGOImageView;
 			sourceTree = "<group>";
 		};
+		12D1E261182E1493003E767E /* EssentialImager */ = {
+			isa = PBXGroup;
+			children = (
+				12D1E262182E1493003E767E /* EIImagePickerDelegate.h */,
+				12D1E263182E1493003E767E /* EIImagePickerDelegate.m */,
+				12D1E264182E1493003E767E /* EIOperationManager.h */,
+				12D1E265182E1493003E767E /* EIOperationManager.m */,
+				12D1E266182E1493003E767E /* EssentialImager.h */,
+				12D1E267182E1493003E767E /* NSData+Storage.h */,
+				12D1E268182E1493003E767E /* NSData+Storage.m */,
+				12D1E269182E1493003E767E /* StandardPaths */,
+				12D1E26C182E1493003E767E /* UIImage+Resize.h */,
+				12D1E26D182E1493003E767E /* UIImage+Resize.m */,
+			);
+			path = EssentialImager;
+			sourceTree = "<group>";
+		};
+		12D1E269182E1493003E767E /* StandardPaths */ = {
+			isa = PBXGroup;
+			children = (
+				12D1E26A182E1493003E767E /* StandardPaths.h */,
+				12D1E26B182E1493003E767E /* StandardPaths.m */,
+			);
+			path = StandardPaths;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,6 +400,8 @@
 				12D1E1FE182DF7C1003E767E /* Main_iPhone.storyboard in Resources */,
 				12D1E245182E0362003E767E /* CHANGELOG.md in Resources */,
 				12D1E259182E059D003E767E /* README.mdown in Resources */,
+				12D1E278182E1CC6003E767E /* boy.png in Resources */,
+				12D1E274182E18EE003E767E /* plus_icon.png in Resources */,
 				12D1E247182E0362003E767E /* README.md in Resources */,
 				12D1E1F5182DF7C1003E767E /* InfoPlist.strings in Resources */,
 			);
@@ -358,15 +423,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D1E226182DF86B003E767E /* ImageViewCell.m in Sources */,
+				12D1E26F182E1493003E767E /* EIOperationManager.m in Sources */,
 				12D1E227182DF86B003E767E /* VoteViewController.m in Sources */,
+				12D1E26E182E1493003E767E /* EIImagePickerDelegate.m in Sources */,
+				12D1E270182E1493003E767E /* NSData+Storage.m in Sources */,
+				12D1E260182E1112003E767E /* CreateVoteViewController.m in Sources */,
 				12D1E204182DF7C1003E767E /* ViewController.m in Sources */,
 				12D1E258182E059D003E767E /* EGOCache.m in Sources */,
 				12D1E25C182E059D003E767E /* EGOImageLoader.m in Sources */,
 				12D1E1FB182DF7C1003E767E /* AppDelegate.m in Sources */,
 				12D1E25D182E059D003E767E /* EGOImageView.m in Sources */,
+				12D1E271182E1493003E767E /* StandardPaths.m in Sources */,
 				12D1E25A182E059D003E767E /* EGOImageButton.m in Sources */,
 				12D1E1F7182DF7C1003E767E /* main.m in Sources */,
 				12D1E246182E0362003E767E /* JSONKit.m in Sources */,
+				12D1E272182E1493003E767E /* UIImage+Resize.m in Sources */,
+				12D1E27E182E209E003E767E /* CategoryView.m in Sources */,
 				12D1E25B182E059D003E767E /* EGOImageLoadConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
