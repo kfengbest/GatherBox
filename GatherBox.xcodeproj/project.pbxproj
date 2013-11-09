@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12BDAA65182EA0C400A61194 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA64182EA0C400A61194 /* DashboardViewController.m */; };
+		12BDAA68182EA68700A61194 /* VotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA67182EA68700A61194 /* VotingViewController.m */; };
 		12D1E1EB182DF7C1003E767E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EA182DF7C1003E767E /* Foundation.framework */; };
 		12D1E1ED182DF7C1003E767E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */; };
 		12D1E1EF182DF7C1003E767E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EE182DF7C1003E767E /* UIKit.framework */; };
@@ -23,7 +25,6 @@
 		12D1E217182DF7C1003E767E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E215182DF7C1003E767E /* InfoPlist.strings */; };
 		12D1E219182DF7C1003E767E /* GatherBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E218182DF7C1003E767E /* GatherBoxTests.m */; };
 		12D1E226182DF86B003E767E /* ImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E223182DF86B003E767E /* ImageViewCell.m */; };
-		12D1E227182DF86B003E767E /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E225182DF86B003E767E /* VoteViewController.m */; };
 		12D1E229182DF98D003E767E /* Cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E228182DF98D003E767E /* Cell.png */; };
 		12D1E245182E0362003E767E /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E241182E0362003E767E /* CHANGELOG.md */; };
 		12D1E246182E0362003E767E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E243182E0362003E767E /* JSONKit.m */; };
@@ -95,6 +96,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12BDAA63182EA0C400A61194 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		12BDAA64182EA0C400A61194 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		12BDAA66182EA68700A61194 /* VotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotingViewController.h; sourceTree = "<group>"; };
+		12BDAA67182EA68700A61194 /* VotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotingViewController.m; sourceTree = "<group>"; };
 		12D1E1E7182DF7C1003E767E /* GatherBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D1E1EA182DF7C1003E767E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,8 +122,6 @@
 		12D1E218182DF7C1003E767E /* GatherBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GatherBoxTests.m; sourceTree = "<group>"; };
 		12D1E222182DF86B003E767E /* ImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCell.h; sourceTree = "<group>"; };
 		12D1E223182DF86B003E767E /* ImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCell.m; sourceTree = "<group>"; };
-		12D1E224182DF86B003E767E /* VoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteViewController.h; sourceTree = "<group>"; };
-		12D1E225182DF86B003E767E /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
 		12D1E228182DF98D003E767E /* Cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cell.png; sourceTree = "<group>"; };
 		12D1E241182E0362003E767E /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
 		12D1E242182E0362003E767E /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -264,8 +267,6 @@
 				12D1E240182E0362003E767E /* JSONKit */,
 				12D1E222182DF86B003E767E /* ImageViewCell.h */,
 				12D1E223182DF86B003E767E /* ImageViewCell.m */,
-				12D1E224182DF86B003E767E /* VoteViewController.h */,
-				12D1E225182DF86B003E767E /* VoteViewController.m */,
 				12D1E1F9182DF7C1003E767E /* AppDelegate.h */,
 				12D1E1FA182DF7C1003E767E /* AppDelegate.m */,
 				12D1E1FC182DF7C1003E767E /* Main_iPhone.storyboard */,
@@ -288,6 +289,10 @@
 				12D1E2D4182E682E003E767E /* CategoryItem.xib */,
 				12D1E2D6182E68C3003E767E /* CategoryItem.h */,
 				12D1E2D7182E68C3003E767E /* CategoryItem.m */,
+				12BDAA63182EA0C400A61194 /* DashboardViewController.h */,
+				12BDAA64182EA0C400A61194 /* DashboardViewController.m */,
+				12BDAA66182EA68700A61194 /* VotingViewController.h */,
+				12BDAA67182EA68700A61194 /* VotingViewController.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -591,8 +596,8 @@
 				12D1E226182DF86B003E767E /* ImageViewCell.m in Sources */,
 				12D1E26F182E1493003E767E /* EIOperationManager.m in Sources */,
 				12D1E284182E2D7C003E767E /* UIImage+ImageEffects.m in Sources */,
-				12D1E227182DF86B003E767E /* VoteViewController.m in Sources */,
 				12D1E285182E2D7C003E767E /* UINavigationController+MHDismissModalView.m in Sources */,
+				12BDAA65182EA0C400A61194 /* DashboardViewController.m in Sources */,
 				12D1E26E182E1493003E767E /* EIImagePickerDelegate.m in Sources */,
 				12D1E270182E1493003E767E /* NSData+Storage.m in Sources */,
 				12D1E288182E2F33003E767E /* AddFriendsViewController.m in Sources */,
@@ -600,6 +605,7 @@
 				12D1E260182E1112003E767E /* CreateVoteViewController.m in Sources */,
 				12D1E2B6182E48BE003E767E /* CalendarViewItem.m in Sources */,
 				12D1E204182DF7C1003E767E /* ViewController.m in Sources */,
+				12BDAA68182EA68700A61194 /* VotingViewController.m in Sources */,
 				12D1E258182E059D003E767E /* EGOCache.m in Sources */,
 				12D1E25C182E059D003E767E /* EGOImageLoader.m in Sources */,
 				12D1E2D8182E68C3003E767E /* CategoryItem.m in Sources */,
