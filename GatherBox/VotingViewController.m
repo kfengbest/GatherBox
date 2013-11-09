@@ -7,6 +7,7 @@
 //
 
 #import "VotingViewController.h"
+#import "CalendarViewItem.h"
 
 @interface VotingViewController ()
 
@@ -27,6 +28,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+
+        NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+        self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
+        [self.option1 setFrame:CGRectMake(98, 150, 98, 194)];
+        [self.view addSubview: self.option1];
+        self.option1.mParent = self;
+        self.option1.mIndex = 0;
+        [self.option1 setDate: [NSDate date]];
+    
 }
 
 - (void)didReceiveMemoryWarning

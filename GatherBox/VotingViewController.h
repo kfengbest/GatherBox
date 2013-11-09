@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class CalendarViewItem;
+
 @interface VotingViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic,strong)IBOutlet CalendarViewItem *option1;
+@property (nonatomic,strong)IBOutlet CalendarViewItem *option2;
+@property (nonatomic,strong)IBOutlet CalendarViewItem *option3;
 
 @end

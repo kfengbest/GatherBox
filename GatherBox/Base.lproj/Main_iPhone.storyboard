@@ -67,13 +67,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="vun-6Z-Cbm"/>
+                    <navigationItem key="navigationItem" id="xNg-tp-FSb"/>
                     <connections>
                         <outlet property="tableView" destination="kBc-ph-u1G" id="kpg-Gx-MjT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwI-su-5VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554" y="1035"/>
+            <point key="canvasLocation" x="-827" y="1914"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hiv-Um-buj">
@@ -465,7 +466,7 @@
                                 </accessibility>
                                 <state key="normal" backgroundImage="add.png"/>
                                 <connections>
-                                    <action selector="selectCategory:" destination="SUH-Ud-NBh" eventType="touchUpInside" id="OHA-Ir-XIS"/>
+                                    <action selector="selectCategory:" destination="SUH-Ud-NBh" eventType="touchUpInside" id="ZaF-SC-myR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="聚会" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i8-2I-6aX">

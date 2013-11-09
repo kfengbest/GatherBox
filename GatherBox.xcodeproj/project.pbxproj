@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		12BDAA65182EA0C400A61194 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA64182EA0C400A61194 /* DashboardViewController.m */; };
 		12BDAA68182EA68700A61194 /* VotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA67182EA68700A61194 /* VotingViewController.m */; };
+		12BDAA6A182EE0E300A61194 /* ReportItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA69182EE0E300A61194 /* ReportItem.xib */; };
+		12BDAA77182EE3CD00A61194 /* tick-date@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA6B182EE3CD00A61194 /* tick-date@2x.png */; };
+		12BDAA78182EE3CD00A61194 /* tick-date.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA6C182EE3CD00A61194 /* tick-date.png */; };
+		12BDAA79182EE3CD00A61194 /* scroll-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA6D182EE3CD00A61194 /* scroll-bg@2x.png */; };
+		12BDAA7A182EE3CD00A61194 /* tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA6E182EE3CD00A61194 /* tab@2x.png */; };
+		12BDAA7B182EE3CD00A61194 /* scroll-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA6F182EE3CD00A61194 /* scroll-bg.png */; };
+		12BDAA7C182EE3CD00A61194 /* tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA70182EE3CD00A61194 /* tab.png */; };
+		12BDAA7D182EE3CD00A61194 /* green-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA71182EE3CD00A61194 /* green-bg@2x.png */; };
+		12BDAA7E182EE3CD00A61194 /* grey-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA72182EE3CD00A61194 /* grey-bg@2x.png */; };
+		12BDAA7F182EE3CD00A61194 /* red-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA73182EE3CD00A61194 /* red-bg@2x.png */; };
+		12BDAA80182EE3CD00A61194 /* green-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA74182EE3CD00A61194 /* green-bg.png */; };
+		12BDAA81182EE3CD00A61194 /* grey-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA75182EE3CD00A61194 /* grey-bg.png */; };
+		12BDAA82182EE3CD00A61194 /* red-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA76182EE3CD00A61194 /* red-bg.png */; };
 		12D1E1EB182DF7C1003E767E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EA182DF7C1003E767E /* Foundation.framework */; };
 		12D1E1ED182DF7C1003E767E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */; };
 		12D1E1EF182DF7C1003E767E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EE182DF7C1003E767E /* UIKit.framework */; };
@@ -100,6 +113,19 @@
 		12BDAA64182EA0C400A61194 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		12BDAA66182EA68700A61194 /* VotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotingViewController.h; sourceTree = "<group>"; };
 		12BDAA67182EA68700A61194 /* VotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotingViewController.m; sourceTree = "<group>"; };
+		12BDAA69182EE0E300A61194 /* ReportItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportItem.xib; sourceTree = "<group>"; };
+		12BDAA6B182EE3CD00A61194 /* tick-date@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick-date@2x.png"; sourceTree = "<group>"; };
+		12BDAA6C182EE3CD00A61194 /* tick-date.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick-date.png"; sourceTree = "<group>"; };
+		12BDAA6D182EE3CD00A61194 /* scroll-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scroll-bg@2x.png"; sourceTree = "<group>"; };
+		12BDAA6E182EE3CD00A61194 /* tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab@2x.png"; sourceTree = "<group>"; };
+		12BDAA6F182EE3CD00A61194 /* scroll-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scroll-bg.png"; sourceTree = "<group>"; };
+		12BDAA70182EE3CD00A61194 /* tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab.png; sourceTree = "<group>"; };
+		12BDAA71182EE3CD00A61194 /* green-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-bg@2x.png"; sourceTree = "<group>"; };
+		12BDAA72182EE3CD00A61194 /* grey-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-bg@2x.png"; sourceTree = "<group>"; };
+		12BDAA73182EE3CD00A61194 /* red-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-bg@2x.png"; sourceTree = "<group>"; };
+		12BDAA74182EE3CD00A61194 /* green-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-bg.png"; sourceTree = "<group>"; };
+		12BDAA75182EE3CD00A61194 /* grey-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey-bg.png"; sourceTree = "<group>"; };
+		12BDAA76182EE3CD00A61194 /* red-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-bg.png"; sourceTree = "<group>"; };
 		12D1E1E7182DF7C1003E767E /* GatherBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D1E1EA182DF7C1003E767E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -293,6 +319,7 @@
 				12BDAA64182EA0C400A61194 /* DashboardViewController.m */,
 				12BDAA66182EA68700A61194 /* VotingViewController.h */,
 				12BDAA67182EA68700A61194 /* VotingViewController.m */,
+				12BDAA69182EE0E300A61194 /* ReportItem.xib */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -300,6 +327,18 @@
 		12D1E1F1182DF7C1003E767E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12BDAA6B182EE3CD00A61194 /* tick-date@2x.png */,
+				12BDAA6C182EE3CD00A61194 /* tick-date.png */,
+				12BDAA6D182EE3CD00A61194 /* scroll-bg@2x.png */,
+				12BDAA6E182EE3CD00A61194 /* tab@2x.png */,
+				12BDAA6F182EE3CD00A61194 /* scroll-bg.png */,
+				12BDAA70182EE3CD00A61194 /* tab.png */,
+				12BDAA71182EE3CD00A61194 /* green-bg@2x.png */,
+				12BDAA72182EE3CD00A61194 /* grey-bg@2x.png */,
+				12BDAA73182EE3CD00A61194 /* red-bg@2x.png */,
+				12BDAA74182EE3CD00A61194 /* green-bg.png */,
+				12BDAA75182EE3CD00A61194 /* grey-bg.png */,
+				12BDAA76182EE3CD00A61194 /* red-bg.png */,
 				12D1E2B7182E4EDA003E767E /* bullet-selected.png */,
 				12D1E2B8182E4EDA003E767E /* bullet-selected@2x.png */,
 				12D1E2B9182E4EDA003E767E /* bullet.png */,
@@ -536,10 +575,14 @@
 				12D1E2A5182E429F003E767E /* date-container@2x.png in Resources */,
 				12D1E2AA182E429F003E767E /* step1.png in Resources */,
 				12D1E2CD182E4EDA003E767E /* step3-selected.png in Resources */,
+				12BDAA7F182EE3CD00A61194 /* red-bg@2x.png in Resources */,
+				12BDAA77182EE3CD00A61194 /* tick-date@2x.png in Resources */,
+				12BDAA7C182EE3CD00A61194 /* tab.png in Resources */,
 				12D1E2A9182E429F003E767E /* Input@2x.png in Resources */,
 				12D1E2AD182E429F003E767E /* step2@2x.png in Resources */,
 				12D1E2B3182E46BF003E767E /* CalendarView.xib in Resources */,
 				12D1E2D5182E682E003E767E /* CategoryItem.xib in Resources */,
+				12BDAA7A182EE3CD00A61194 /* tab@2x.png in Resources */,
 				12D1E2CB182E4EDA003E767E /* step2-selected.png in Resources */,
 				12D1E2C5182E4EDA003E767E /* bullet.png in Resources */,
 				12D1E201182DF7C1003E767E /* Main_iPad.storyboard in Resources */,
@@ -552,25 +595,34 @@
 				12D1E2C3182E4EDA003E767E /* bullet-selected.png in Resources */,
 				12D1E245182E0362003E767E /* CHANGELOG.md in Resources */,
 				12D1E2C6182E4EDA003E767E /* bullet@2x.png in Resources */,
+				12BDAA7B182EE3CD00A61194 /* scroll-bg.png in Resources */,
 				12D1E259182E059D003E767E /* README.mdown in Resources */,
+				12BDAA82182EE3CD00A61194 /* red-bg.png in Resources */,
 				12D1E2C7182E4EDA003E767E /* line.png in Resources */,
 				12D1E29E182E429F003E767E /* add.png in Resources */,
 				12D1E2A2182E429F003E767E /* arrow-right.png in Resources */,
+				12BDAA6A182EE0E300A61194 /* ReportItem.xib in Resources */,
+				12BDAA80182EE3CD00A61194 /* green-bg.png in Resources */,
 				12D1E2C9182E4EDA003E767E /* step1-selected.png in Resources */,
 				12D1E2AC182E429F003E767E /* step2.png in Resources */,
+				12BDAA78182EE3CD00A61194 /* tick-date.png in Resources */,
 				12D1E2C8182E4EDA003E767E /* line@2x.png in Resources */,
 				12D1E278182E1CC6003E767E /* boy.png in Resources */,
+				12BDAA81182EE3CD00A61194 /* grey-bg.png in Resources */,
 				12D1E2C4182E4EDA003E767E /* bullet-selected@2x.png in Resources */,
 				12D1E2CA182E4EDA003E767E /* step1-selected@2x.png in Resources */,
 				12D1E29F182E429F003E767E /* add@2x.png in Resources */,
 				12D1E274182E18EE003E767E /* plus_icon.png in Resources */,
 				12D1E2AE182E429F003E767E /* step3.png in Resources */,
 				12D1E2CC182E4EDA003E767E /* step2-selected@2x.png in Resources */,
+				12BDAA79182EE3CD00A61194 /* scroll-bg@2x.png in Resources */,
 				12D1E247182E0362003E767E /* README.md in Resources */,
+				12BDAA7E182EE3CD00A61194 /* grey-bg@2x.png in Resources */,
 				12D1E2A4182E429F003E767E /* date-container.png in Resources */,
 				12D1E2A0182E429F003E767E /* arrow-left.png in Resources */,
 				12D1E2A7182E429F003E767E /* image-holder.png in Resources */,
 				12D1E2AF182E429F003E767E /* step3@2x.png in Resources */,
+				12BDAA7D182EE3CD00A61194 /* green-bg@2x.png in Resources */,
 				12D1E2A6182E429F003E767E /* image-holder-tick.png in Resources */,
 				12D1E2CE182E4EDA003E767E /* step3-selected@2x.png in Resources */,
 				12D1E2AB182E429F003E767E /* step1@2x.png in Resources */,
