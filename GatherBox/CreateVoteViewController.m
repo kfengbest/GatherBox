@@ -8,6 +8,9 @@
 
 #import "CreateVoteViewController.h"
 #import "CategoryView.h"
+#import "UIImage+ImageEffects.h"
+#import "UINavigationController+MHDismissModalView.h"
+#import "AddFriendsViewController.h"
 
 #define  PIC_WIDTH 80
 #define  PIC_HEIGHT 80
@@ -87,10 +90,17 @@
 
 - (void)selectCategory
 {
-    [UIView beginAnimations:@"ShowCategory" context:nil];
-    [UIView setAnimationDuration:0.5];
-    mCategoryView.frame = CGRectMake(0, 200, 320, 200);
-    [UIView commitAnimations];
+//    [UIView beginAnimations:@"ShowCategory" context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    mCategoryView.frame = CGRectMake(0, 200, 320, 200);
+//    [UIView commitAnimations];
+    
+    AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
+    
 }
 
 
