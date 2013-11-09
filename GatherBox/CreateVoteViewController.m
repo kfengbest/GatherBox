@@ -25,7 +25,6 @@
 @implementation CreateVoteViewController
 
 @synthesize buttonWithImage;
-@synthesize layerMaskedCircleImageView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,36 +48,7 @@
     mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 480, 320, 200)];
     [self.view addSubview:mCategoryView];
     
-    // show how a button looks with returned image set as button image without resizing
-    self.buttonWithImage = [[UIButton alloc] initWithFrame:CGRectMake(20, 10, 120, 120)];
-    buttonWithImage.layer.cornerRadius = 20.0f;
-    buttonWithImage.layer.borderColor = [UIColor blueColor].CGColor;
-    buttonWithImage.layer.borderWidth = 1.0f;
-    [buttonWithImage setImage:[UIImage imageNamed:@"Icon.png"] forState:UIControlStateNormal];
-    [buttonWithImage addTarget:self action:@selector(selectCategory) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:buttonWithImage];
-    
-    
-    // displaying the image in a circle by using a shape layer
-    // layer fill color controls the masking
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.backgroundColor = [UIColor whiteColor].CGColor;
-    UIBezierPath *layerPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(1, 1, 118, 118)];
-    maskLayer.path = layerPath.CGPath;
-    maskLayer.fillColor = [UIColor blackColor].CGColor;
 
-    
-    // use another view for clipping so that when the image size changes, the masking layer does not need to be repositioned
-    UIView *clippingViewForLayerMask = [[UIView alloc] initWithFrame:CGRectMake(160, 180, 120, 120)];
-    clippingViewForLayerMask.layer.mask = maskLayer;
-    clippingViewForLayerMask.clipsToBounds = YES;
-    [self.view addSubview:clippingViewForLayerMask];
-    
-    self.layerMaskedCircleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
-    layerMaskedCircleImageView.backgroundColor = [UIColor yellowColor];
-    [clippingViewForLayerMask addSubview:layerMaskedCircleImageView];
-
-    
     
 }
 

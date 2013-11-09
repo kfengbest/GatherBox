@@ -14,7 +14,7 @@
     NSMutableArray *addedPicArray;
 }
 @property (nonatomic, strong) UIButton *buttonWithImage;
-@property (nonatomic, strong) UIImageView *layerMaskedCircleImageView;
+
 
 @property (retain, nonatomic) IBOutlet UIScrollView *picScroller;
 @property (retain, nonatomic) IBOutlet UIButton *plusButton;
