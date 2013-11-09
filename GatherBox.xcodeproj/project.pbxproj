@@ -80,6 +80,8 @@
 		12D1E2CD182E4EDA003E767E /* step3-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E2C1182E4EDA003E767E /* step3-selected.png */; };
 		12D1E2CE182E4EDA003E767E /* step3-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E2C2182E4EDA003E767E /* step3-selected@2x.png */; };
 		12D1E2D1182E6047003E767E /* ChooseDateTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */; };
+		12D1E2D5182E682E003E767E /* CategoryItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12D1E2D4182E682E003E767E /* CategoryItem.xib */; };
+		12D1E2D8182E68C3003E767E /* CategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D1E2D7182E68C3003E767E /* CategoryItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +194,9 @@
 		12D1E2C2182E4EDA003E767E /* step3-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step3-selected@2x.png"; sourceTree = "<group>"; };
 		12D1E2CF182E6047003E767E /* ChooseDateTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseDateTimeView.h; sourceTree = "<group>"; };
 		12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseDateTimeView.m; sourceTree = "<group>"; };
+		12D1E2D4182E682E003E767E /* CategoryItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryItem.xib; sourceTree = "<group>"; };
+		12D1E2D6182E68C3003E767E /* CategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryItem.h; sourceTree = "<group>"; };
+		12D1E2D7182E68C3003E767E /* CategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +285,9 @@
 				12D1E2B5182E48BE003E767E /* CalendarViewItem.m */,
 				12D1E2CF182E6047003E767E /* ChooseDateTimeView.h */,
 				12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */,
+				12D1E2D4182E682E003E767E /* CategoryItem.xib */,
+				12D1E2D6182E68C3003E767E /* CategoryItem.h */,
+				12D1E2D7182E68C3003E767E /* CategoryItem.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -526,6 +534,7 @@
 				12D1E2A9182E429F003E767E /* Input@2x.png in Resources */,
 				12D1E2AD182E429F003E767E /* step2@2x.png in Resources */,
 				12D1E2B3182E46BF003E767E /* CalendarView.xib in Resources */,
+				12D1E2D5182E682E003E767E /* CategoryItem.xib in Resources */,
 				12D1E2CB182E4EDA003E767E /* step2-selected.png in Resources */,
 				12D1E2C5182E4EDA003E767E /* bullet.png in Resources */,
 				12D1E201182DF7C1003E767E /* Main_iPad.storyboard in Resources */,
@@ -593,6 +602,7 @@
 				12D1E204182DF7C1003E767E /* ViewController.m in Sources */,
 				12D1E258182E059D003E767E /* EGOCache.m in Sources */,
 				12D1E25C182E059D003E767E /* EGOImageLoader.m in Sources */,
+				12D1E2D8182E68C3003E767E /* CategoryItem.m in Sources */,
 				12D1E1FB182DF7C1003E767E /* AppDelegate.m in Sources */,
 				12D1E25D182E059D003E767E /* EGOImageView.m in Sources */,
 				12D1E271182E1493003E767E /* StandardPaths.m in Sources */,

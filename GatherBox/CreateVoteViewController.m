@@ -72,11 +72,12 @@
 
 - (IBAction)selectCategory:(id)sender
 {
-    AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
-    [self presentViewController:nav animated:YES completion:^{
-        
-    }];
+    [UIView beginAnimations:@"ShowCategory" context:nil];
+    [UIView setAnimationDuration:0.5];
+    mCategoryView.frame = CGRectMake(0, 568-250, 320, 250);
+    [UIView commitAnimations];
+    
+
 }
 
 - (void) clickOnCalendar: (NSInteger)index
@@ -117,10 +118,11 @@
     int x = indexPath.row;
     NSLog(@"%d", x);
     if (x == 14) {
-        [UIView beginAnimations:@"ShowCategory" context:nil];
-        [UIView setAnimationDuration:0.5];
-        mCategoryView.frame = CGRectMake(0, 568-250, 320, 250);
-        [UIView commitAnimations];
+        AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
     }
 }
 

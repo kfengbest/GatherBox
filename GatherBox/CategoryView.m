@@ -7,6 +7,7 @@
 //
 
 #import "CategoryView.h"
+#import "CategoryItem.h"
 
 @implementation CategoryView
 
@@ -17,6 +18,14 @@
         // Initialization code
         self.backgroundColor = [UIColor purpleColor];
 
+        for (int j = 0; j < 3; j++) {
+            NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
+            CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
+            [cal setFrame:CGRectMake(90*j, 0, 90, 90)];
+            [self addSubview:cal];
+            cal.mParent = self;
+        }
+        
     }
     return self;
 }

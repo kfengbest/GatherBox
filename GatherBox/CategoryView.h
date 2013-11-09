@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CategoryView : UIView
+@property (nonatomic, strong) NSString* mSelectedItem;
 
 @end
