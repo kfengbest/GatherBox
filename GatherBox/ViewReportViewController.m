@@ -36,19 +36,19 @@
     self.option1 = (ReportItem*)[nibView objectAtIndex:0];
     [self.option1 setFrame:CGRectMake(0, 100, 320, 130)];
     [self.view addSubview: self.option1];
-    [self.option1 init];
+    [self.option1 initWithData];
 
     NSArray* nibView2 =  [[NSBundle mainBundle] loadNibNamed:@"ReportItem"owner:self options:nil];
     self.option2 = (ReportItem*)[nibView2 objectAtIndex:0];
     [self.option2 setFrame:CGRectMake(0, 100 + 130 + 20, 320, 130)];
     [self.view addSubview: self.option2];
-    [self.option2 init];
+    [self.option2 initWithData];
 
     NSArray* nibView3 =  [[NSBundle mainBundle] loadNibNamed:@"ReportItem"owner:self options:nil];
     self.option3 = (ReportItem*)[nibView3 objectAtIndex:0];
     [self.option3 setFrame:CGRectMake(0, 100 + (130 + 20) * 2, 320, 130)];
     [self.view addSubview: self.option3];
-    [self.option3 init];
+    [self.option3 initWithData];
 
 }
 

@@ -14,5 +14,8 @@
 
 @interface DashboardViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)IBOutlet UITableView *tableView;
+@property (retain, nonatomic) IBOutlet UIImageView *mIndicatorImage;
+- (IBAction)showHistory:(id)sender;
+- (IBAction)showLatest:(id)sender;
 
 @end

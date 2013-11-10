@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="isb-Vq-mIh">
-                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -142,17 +142,56 @@
                                     <outlet property="delegate" destination="CHZ-Xn-Rff" id="DL7-bK-sa5"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-rl-9F0">
+                                <rect key="frame" x="0.0" y="65" width="160" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="scroll-bg.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLatest:" destination="CHZ-Xn-Rff" eventType="touchUpInside" id="mdE-Cj-Rsn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8W-oY-Sml">
+                                <rect key="frame" x="154" y="65" width="166" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Finished" image="scroll-bg.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHistory:" destination="CHZ-Xn-Rff" eventType="touchUpInside" id="xL4-am-WD5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tab.png" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-8f-Mls">
+                                <rect key="frame" x="0.0" y="61" width="160" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已结束" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE6-6G-MMd">
+                                <rect key="frame" x="208" y="81" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="即将开始" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxZ-95-wTm">
+                                <rect key="frame" x="51" y="81" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="GatherBox" id="ZHT-b2-rFG">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="VuN-0i-k4V">
+                        <barButtonItem key="rightBarButtonItem" title="发布新活动" id="VuN-0i-k4V">
                             <connections>
                                 <segue destination="aBA-YI-iNX" kind="push" id="wkq-L2-dOt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mIndicatorImage" destination="c1e-8f-Mls" id="G0Z-0l-7Md"/>
                         <outlet property="tableView" destination="isb-Vq-mIh" id="3Yz-Hn-vc0"/>
                     </connections>
                 </viewController>
@@ -226,7 +265,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="axw-aG-rA2">
-                        <barButtonItem key="rightBarButtonItem" title="Report" id="iBj-Iv-jop">
+                        <barButtonItem key="rightBarButtonItem" title="结果" id="iBj-Iv-jop">
                             <connections>
                                 <segue destination="nWP-dt-it5" kind="push" id="FRc-aF-Hyj"/>
                             </connections>
@@ -518,6 +557,8 @@
         <image name="bullet.png" width="27" height="27"/>
         <image name="image-holder.png" width="218" height="218"/>
         <image name="line.png" width="540" height="1"/>
+        <image name="scroll-bg.png" width="513" height="155"/>
+        <image name="tab.png" width="270" height="97"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

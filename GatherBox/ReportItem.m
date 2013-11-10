@@ -22,7 +22,7 @@
     return self;
 }
 
--(void) init
+-(void) initWithData
 {
     int iconW = 90;
     int iconH = 90;

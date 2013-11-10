@@ -71,4 +71,23 @@
     
 }
 
+- (IBAction)showHistory:(id)sender {
+    [UIView beginAnimations:@"FloatingAnim" context:nil];
+    [UIView setAnimationDuration:0.5];
+    self.mIndicatorImage.frame = CGRectMake(160, 61, 160, 65);
+    [UIView commitAnimations];
+    
+}
+
+- (IBAction)showLatest:(id)sender {
+    [UIView beginAnimations:@"FloatingAnim" context:nil];
+    [UIView setAnimationDuration:0.5];
+    self.mIndicatorImage.frame = CGRectMake(0, 61, 160, 65);
+    [UIView commitAnimations];
+}
+
+- (void)dealloc {
+    [_mIndicatorImage release];
+    [super dealloc];
+}
 @end
