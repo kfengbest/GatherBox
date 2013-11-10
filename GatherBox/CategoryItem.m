@@ -8,6 +8,7 @@
 
 #import "CategoryItem.h"
 #import "CategoryView.h"
+#import "ActivityType.h"
 
 @implementation CategoryItem
 
@@ -32,6 +33,13 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.mParent.mSelectedItem = self.mTitle.text;
+}
+
+-(void) setData : (ActivityType*)data
+{
+    self.mData = data;
+    self.mTitle.text = data.name;
+//    self.mImage = [UIImage imageNamed:data.imageUrl];
 }
 
 @end

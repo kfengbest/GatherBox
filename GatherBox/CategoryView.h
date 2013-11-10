@@ -10,5 +10,5 @@
 
 @interface CategoryView : UIView
 @property (nonatomic, strong) NSString* mSelectedItem;
-
+@property (readwrite, nonatomic, strong) NSArray *posts;
 @end

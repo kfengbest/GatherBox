@@ -8,6 +8,7 @@
 
 #import "CategoryView.h"
 #import "CategoryItem.h"
+#import "ActivityType.h"
 
 @implementation CategoryView
 
@@ -18,13 +19,20 @@
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
 
-        for (int j = 0; j < 3; j++) {
-            NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
-            CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
-            [cal setFrame:CGRectMake(90*j, 0, 90, 90)];
-            [self addSubview:cal];
-            cal.mParent = self;
-        }
+        NSURLSessionTask *task = [ActivityType globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
+            if (!error) {
+                self.posts = posts;
+                
+                for (int j = 0; j < posts.count; j++) {
+                    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
+                    CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
+                    [cal setFrame:CGRectMake(90*j, 0, 90, 90)];
+                    [self addSubview:cal];
+                    cal.mParent = self;
+                    [cal setData:[posts objectAtIndex:j]];
+                }
+            }
+        }];
         
     }
     return self;

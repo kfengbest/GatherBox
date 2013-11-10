@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class CategoryView;
+@class ActivityType;
 
 @interface CategoryItem : UIView
 
 @property (nonatomic, strong) IBOutlet UIImageView *mImage;
 @property (nonatomic, strong) IBOutlet UILabel *mTitle;
 @property (nonatomic, strong) CategoryView* mParent;
+@property (nonatomic, strong) ActivityType* mData;
 
+-(void) setData : (ActivityType*)data;
 @end
