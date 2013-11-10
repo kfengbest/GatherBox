@@ -1009,7 +1009,6 @@
 		12D1E21D182DF7C1003E767E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Edward Yuen (RCQG9CH3B8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1025,7 +1024,6 @@
 		12D1E21E182DF7C1003E767E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Midland Cybernet Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
