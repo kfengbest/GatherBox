@@ -19,5 +19,6 @@
 @property(nonatomic,strong) UIImageView *bluredView;
 @property(nonatomic,strong) UIImage *screenShotImage;
 
+- (IBAction)onClicked:(id)sender;
 
 @end
