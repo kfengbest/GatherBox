@@ -42,7 +42,7 @@
     
     NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
     self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
-    [self.option1 setFrame:CGRectMake(5, 150, 98, 194)];
+    [self.option1 setFrame:CGRectMake(5, 180, 98, 194)];
     [self.view addSubview: self.option1];
     self.option1.mParent = self;
     self.option1.mIndex = 1;
@@ -51,7 +51,7 @@
     
     NSArray* nibView2 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
     self.option2 = (CalendarViewItem*)[nibView2 objectAtIndex:0];
-    [self.option2 setFrame:CGRectMake(5 + 98, 150, 98, 194)];
+    [self.option2 setFrame:CGRectMake(5 + 98, 180, 98, 194)];
     [self.view addSubview: self.option2];
     self.option2.mParent = self;
     self.option2.bVotingMode = true;
@@ -61,7 +61,7 @@
     
     NSArray* nibView3 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
     self.option3 = (CalendarViewItem*)[nibView3 objectAtIndex:0];
-    [self.option3 setFrame:CGRectMake(5 + 98 * 2, 150, 98, 194)];
+    [self.option3 setFrame:CGRectMake(5 + 98 * 2, 180, 98, 194)];
     [self.view addSubview: self.option3];
     self.option3.mParent = self;
     self.option3.bVotingMode = true;
