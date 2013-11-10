@@ -596,6 +596,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Kaven Feng";
 				TargetAttributes = {
+					12D1E1E6182DF7C1003E767E = {
+						DevelopmentTeam = 8KJGKN38LP;
+					};
 					12D1E20A182DF7C1003E767E = {
 						TestTargetID = 12D1E1E6182DF7C1003E767E;
 					};
@@ -872,10 +875,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Edward Yuen (RCQG9CH3B8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatherBox/GatherBox-Prefix.pch";
 				INFOPLIST_FILE = "GatherBox/GatherBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -885,10 +890,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Midland Cybernet Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatherBox/GatherBox-Prefix.pch";
 				INFOPLIST_FILE = "GatherBox/GatherBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
