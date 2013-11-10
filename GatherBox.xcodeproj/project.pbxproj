@@ -880,6 +880,7 @@
 				GCC_PREFIX_HEADER = "GatherBox/GatherBox-Prefix.pch";
 				INFOPLIST_FILE = "GatherBox/GatherBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "18309E47-51F7-4C36-931B-1F4739D2C3BA";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -895,6 +896,7 @@
 				GCC_PREFIX_HEADER = "GatherBox/GatherBox-Prefix.pch";
 				INFOPLIST_FILE = "GatherBox/GatherBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "18309E47-51F7-4C36-931B-1F4739D2C3BA";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
