@@ -20,6 +20,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.bVotingMode = false;
+        self.bTicked = false;
     }
     return self;
 }
@@ -35,12 +37,30 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-   // self.backgroundColor = [UIColor redColor];
-    [self.mParent clickOnCalendar: self.mIndex];
+    if (self.bVotingMode) {
+        if (self.bTicked) {
+            self.bTicked = false;
+            NSString *string = [NSString stringWithFormat:@"step%d.png",self.mIndex];
+            self.mStep.image = [UIImage imageNamed:string];
+
+        }else
+        {
+            self.bTicked = true;
+            self.mStep.image = [UIImage imageNamed:@"tick-date.png"];
+
+        }
+        
+    }
+    else
+        [self.mParent clickOnCalendar: self.mIndex];
 }
 
 - (void) setDate: (NSDate*)date
 {
+    NSString *string = [NSString stringWithFormat:@"step%d.png",self.mIndex];
+    self.mStep.image = [UIImage imageNamed:string];
+
+    
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
 //    
 //    NSInteger day = [components day];

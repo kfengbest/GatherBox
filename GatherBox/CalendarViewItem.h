@@ -19,6 +19,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *mTime;
 @property (nonatomic, strong) CreateVoteViewController* mParent;
 @property (nonatomic) NSInteger mIndex;
+@property (nonatomic) bool bVotingMode;
+@property (nonatomic) bool bTicked;
 
 - (void) setDate: (NSDate*)date;
 

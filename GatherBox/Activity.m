@@ -19,7 +19,7 @@
         return nil;
     }
     
-    self.type = [[attributes valueForKeyPath:@"activity_type"] integerValue];
+   // self.type = [[attributes valueForKeyPath:@"activity_type"] integerValue];
     self.name = [attributes valueForKeyPath:@"name"];
     self.guid = [attributes valueForKeyPath:@"guid"];
     self.creator = [attributes valueForKeyPath:@"creator"];
