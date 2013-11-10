@@ -39,7 +39,8 @@
 {
     self.mData = data;
     self.mTitle.text = data.name;
-//    self.mImage = [UIImage imageNamed:data.imageUrl];
+    NSString *string = [NSString stringWithFormat:@"type%d.png",data.type];
+    self.mImage.image = [UIImage imageNamed:string];
 }
 
 @end
