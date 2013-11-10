@@ -133,6 +133,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="labelActivityName" destination="Fja-ZB-85y" id="s2Q-hR-twc"/>
                                             <segue destination="R2F-WH-zOT" kind="push" id="YRy-bO-5Ss"/>
                                         </connections>
                                     </tableViewCell>

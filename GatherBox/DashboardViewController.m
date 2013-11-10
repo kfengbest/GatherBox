@@ -7,8 +7,15 @@
 //
 
 #import "DashboardViewController.h"
+#import "Activity.h"
 
 @implementation EventCell
+
+-(void) setData :(Activity*) data
+{
+    self.mData = data;
+    self.labelActivityName.text = data.name;
+}
 
 @end
 
@@ -31,6 +38,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSURLSessionTask *task = [Activity globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
+        if (!error) {
+            self.posts = posts;
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,23 +64,14 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 60;
+    return [self.posts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //    static NSString *CellIdentifier = @"Cell";
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    //
-    //    // Configure the cell...
-    //
-    //    return cell;
-    
-    
     EventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventCell"];
-//    cell.labelText.text = [NSString stringWithFormat:@"Row %li",(long)indexPath.row];
-//    cell.labelText.textColor = [UIColor blackColor];
-//    cell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2];
+    [cell setData:[self.posts objectAtIndex:indexPath.row]];
+    
     return cell;
     
 }
