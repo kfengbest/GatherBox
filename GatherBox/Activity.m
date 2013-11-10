@@ -31,12 +31,23 @@
     return [[AFAppDotNetAPIClient sharedClient] GET:@"/api/activities.json?type=current" parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSArray *postsFromResponse = [JSON valueForKeyPath:@"data"];
         NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
-        for (NSDictionary *attributes in postsFromResponse) {
-            
+        for (int i = 0; i < [postsFromResponse count]; i++) {
+            NSDictionary *attributes = [postsFromResponse objectAtIndex:i];
             Activity *post = [[Activity alloc] initWithAttributes:attributes];
             
+            int index = i % 5;
+            if (index == 0) {
+                index = 1;
+            }
+            NSString *string = [NSString stringWithFormat:@"avatar%d.png",index];
+            post.creator = string;
             [mutablePosts addObject:post];
         }
+        
+//        for (NSDictionary *attributes in postsFromResponse) {
+//            
+//
+//        }
         
         if (block) {
             block([NSArray arrayWithArray:mutablePosts], nil);

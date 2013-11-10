@@ -129,7 +129,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bullet.png" highlightedImage="bullet-selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZrG-C3-8ZT">
-                                                    <rect key="frame" x="9" y="30" width="33" height="29"/>
+                                                    <rect key="frame" x="14" y="28" width="33" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-holder.png" translatesAutoresizingMaskIntoConstraints="NO" id="1FI-Da-cjK">
@@ -137,7 +137,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fja-ZB-85y">
-                                                    <rect key="frame" x="59" y="17" width="154" height="42"/>
+                                                    <rect key="frame" x="64" y="17" width="154" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -147,6 +147,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelActivityName" destination="Fja-ZB-85y" id="s2Q-hR-twc"/>
+                                            <outlet property="mCreateorImage" destination="1FI-Da-cjK" id="8dP-Vx-t8M"/>
                                             <segue destination="R2F-WH-zOT" kind="push" id="YRy-bO-5Ss"/>
                                         </connections>
                                     </tableViewCell>

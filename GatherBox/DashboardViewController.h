@@ -12,6 +12,7 @@
 
 @interface EventCell : UITableViewCell
 @property (nonatomic,strong)IBOutlet UILabel *labelActivityName;
+@property (nonatomic, strong) IBOutlet UIImageView *mCreateorImage;
 @property (nonatomic,strong)IBOutlet Activity* mData;
 
 -(void) setData :(Activity*) data;

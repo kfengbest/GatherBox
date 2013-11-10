@@ -15,6 +15,7 @@
 {
     self.mData = data;
     self.labelActivityName.text = data.name;
+    self.mCreateorImage.image = [UIImage imageNamed: data.creator];
 }
 
 @end
