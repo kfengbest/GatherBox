@@ -26,8 +26,8 @@
         mDatePicker = [ [ UIDatePicker alloc] initWithFrame:CGRectMake(0.0,0.0,300,200)];
         [self addSubview:mDatePicker];
         
-        NSDate* minDate = [[NSDate alloc]initWithString:@"1900-01-01 00:00:00 -0500"];
-        NSDate* maxDate = [[NSDate alloc]initWithString:@"2099-01-01 00:00:00 -0500"];
+        NSDate* minDate = [NSDate date];
+        NSDate* maxDate = [NSDate date];
         
         mDatePicker.minimumDate = minDate;
         mDatePicker.maximumDate = maxDate;

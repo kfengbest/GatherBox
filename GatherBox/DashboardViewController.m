@@ -86,8 +86,4 @@
     [UIView commitAnimations];
 }
 
-- (void)dealloc {
-    [_mIndicatorImage release];
-    [super dealloc];
-}
 @end

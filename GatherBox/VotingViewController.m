@@ -30,13 +30,29 @@
 	// Do any additional setup after loading the view.
     
 
-        NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
-        self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
-        [self.option1 setFrame:CGRectMake(98, 150, 98, 194)];
-        [self.view addSubview: self.option1];
-        self.option1.mParent = self;
-        self.option1.mIndex = 0;
-        [self.option1 setDate: [NSDate date]];
+    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+    self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
+    [self.option1 setFrame:CGRectMake(98, 150, 98, 194)];
+    [self.view addSubview: self.option1];
+    self.option1.mParent = self;
+    self.option1.mIndex = 0;
+    [self.option1 setDate: [NSDate date]];
+    
+    NSArray* nibView2 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+    self.option2 = (CalendarViewItem*)[nibView2 objectAtIndex:0];
+    [self.option2 setFrame:CGRectMake(98, 150, 98, 194)];
+    [self.view addSubview: self.option2];
+    self.option2.mParent = self;
+    self.option2.mIndex = 0;
+    [self.option2 setDate: [NSDate date]];
+    
+    NSArray* nibView3 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+    self.option3 = (CalendarViewItem*)[nibView3 objectAtIndex:0];
+    [self.option3 setFrame:CGRectMake(98, 150, 98, 194)];
+    [self.view addSubview: self.option3];
+    self.option3.mParent = self;
+    self.option3.mIndex = 0;
+    [self.option3 setDate: [NSDate date]];
     
 }
 
