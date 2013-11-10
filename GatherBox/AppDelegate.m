@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AFNetworking.h"
+#import "AFURLRequestSerialization.h"
 
 @implementation AppDelegate
 
@@ -58,17 +60,30 @@
     NSLog(@"deviceToken: %@", token);
     
     
-    NSURL *url = [NSURL URLWithString:@"http://collect.im/"];
-    NSDictionary *parameters = [NSDictionary dictionaryWithObject:token forKey:@"token"];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:token, @"token", @"harryng", @"username", nil];
     
-//    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:url];
-//    [client registerHTTPOperationClass:[AFJSONRequestOperation class]];
-//    
-//    [client postPath:@"api/tokens/ios" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"error: %@", error.description);
-//    }];
+    NSURL *URL = [NSURL URLWithString:@"http://collect.im/api/tokens/ios"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[self encodeDictionary:parameters]];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSError *error;
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+        NSLog(@"Success: %@", [dict objectForKey:@"status"]);
+    }];
+}
+
+- (NSData*)encodeDictionary:(NSDictionary*)dictionary {
+    NSMutableArray *parts = [[NSMutableArray alloc] init];
+    for (NSString *key in dictionary) {
+        NSString *encodedValue = [[dictionary objectForKey:key] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *encodedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedKey, encodedValue];
+        [parts addObject:part];
+    }
+    NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
+    return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end
