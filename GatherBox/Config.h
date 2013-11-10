@@ -11,7 +11,7 @@
 
 static NSString* s_BaseUrl = @"http://collect.im";
 static NSString* s_getActiveTypeAPI = @"/api/activities/types.json";
-static NSString* s_getActiveListAPI = @"/api/activities.json?";
+static NSString* s_getActiveListAPI = @"/api/activities.json?type=current";
 static NSString* s_getActiveDetailAPI = @"/api/activities/show.json?";
 
 static NSString* s_postActiveAPI = @"/api/activities";
