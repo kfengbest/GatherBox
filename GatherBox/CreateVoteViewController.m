@@ -17,6 +17,7 @@
 #import "AFNetworking/AFNetworking.h"
 #import "AFAppDotNetAPIClient.h"
 #import "Config.h"
+#import "ImageViewCell.h"
 
 
 #define  PIC_WIDTH 80
@@ -27,7 +28,7 @@
 {
     CategoryView*   mCategoryView;
     ChooseDateTimeView * mChooseDateTimeView;
-    
+    NSMutableArray* userList;
 }
 @end
 
@@ -50,22 +51,27 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    addedPicArray =[[NSMutableArray alloc]init];
-
+    userList = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 4; i++) {
+        NSString *string = [NSString stringWithFormat:@"avatar%d.png",i];
+        [userList addObject:string];
+    }
+    [userList addObject:@"add.png"];
+    
     for (int j = 0; j < 3; j++) {
         NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
         CalendarViewItem * cal = (CalendarViewItem*)[nibView objectAtIndex:0];
-        [cal setFrame:CGRectMake(98*j, 150, 98, 194)];
+        [cal setFrame:CGRectMake(98*j, 165, 98, 194)];
         [self.view addSubview:cal];
         cal.mParent = self;
         cal.mIndex = j;
         [cal setDate: [NSDate date]];
     }
     
-    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 570, 320, 250)];
+    mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 570, 320, 400)];
     [self.view addSubview:mCategoryView];
     
-    mChooseDateTimeView = [[ChooseDateTimeView alloc] initWithFrame:CGRectMake(0, 570, 320, 250)];
+    mChooseDateTimeView = [[ChooseDateTimeView alloc] initWithFrame:CGRectMake(0, 570, 320, 300)];
     [self.view addSubview:mChooseDateTimeView];
 }
 
@@ -79,7 +85,7 @@
 {
     [UIView beginAnimations:@"ShowCategory" context:nil];
     [UIView setAnimationDuration:0.5];
-    mCategoryView.frame = CGRectMake(0, 568-250, 320, 250);
+    mCategoryView.frame = CGRectMake(0, 568-400, 320, 400);
     [UIView commitAnimations];
     
 
@@ -87,7 +93,7 @@
 
 - (void) clickOnCalendar: (NSInteger)index
 {
-    [UIView beginAnimations:@"ShowCategory" context:nil];
+    [UIView beginAnimations:@"ShowTime" context:nil];
     [UIView setAnimationDuration:0.5];
     mChooseDateTimeView.frame = CGRectMake(0, 568-250, 320, 250);
     [UIView commitAnimations];
@@ -100,20 +106,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 15; //[fileThumbnails count];
+    return [userList count]; //[fileThumbnails count];
     
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *myCell = [collectionView
+    ImageViewCell *myCell = [collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"AttendeeCell"
                                     forIndexPath:indexPath];
     
-    //NSString* path = fileThumbnails[indexPath.row];
-  //  UIImage *img = [UIImage imageNamed:@"Cell.png"];
-    
-  //  myCell.layer.contents = (id)img.CGImage;
+    NSString* path = userList[indexPath.row];
+    myCell.imageView.image = [UIImage imageNamed:path];
     
     return myCell;
 }
@@ -122,7 +126,7 @@
 {
     int x = indexPath.row;
     NSLog(@"%d", x);
-    if (x == 14) {
+    if (x == ([userList count] - 1)) {
         AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
         [self presentViewController:nav animated:YES completion:^{

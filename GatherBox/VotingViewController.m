@@ -8,9 +8,13 @@
 
 #import "VotingViewController.h"
 #import "CalendarViewItem.h"
+#import "ImageViewCell.h"
+#import "AddFriendsViewController.h"
 
 @interface VotingViewController ()
-
+{
+    NSMutableArray* userList;
+}
 @end
 
 @implementation VotingViewController
@@ -29,10 +33,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-
+    userList = [[NSMutableArray alloc] init];
+    for (int i = 1; i <= 4; i++) {
+        NSString *string = [NSString stringWithFormat:@"avatar%d.png",i];
+        [userList addObject:string];
+    }
+    [userList addObject:@"add.png"];
+    
     NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
     self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
-    [self.option1 setFrame:CGRectMake(98, 150, 98, 194)];
+    [self.option1 setFrame:CGRectMake(5, 150, 98, 194)];
     [self.view addSubview: self.option1];
     self.option1.mParent = self;
     self.option1.mIndex = 0;
@@ -40,7 +50,7 @@
     
     NSArray* nibView2 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
     self.option2 = (CalendarViewItem*)[nibView2 objectAtIndex:0];
-    [self.option2 setFrame:CGRectMake(98, 150, 98, 194)];
+    [self.option2 setFrame:CGRectMake(5 + 98, 150, 98, 194)];
     [self.view addSubview: self.option2];
     self.option2.mParent = self;
     self.option2.mIndex = 0;
@@ -48,7 +58,7 @@
     
     NSArray* nibView3 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
     self.option3 = (CalendarViewItem*)[nibView3 objectAtIndex:0];
-    [self.option3 setFrame:CGRectMake(98, 150, 98, 194)];
+    [self.option3 setFrame:CGRectMake(5 + 98 * 2, 150, 98, 194)];
     [self.view addSubview: self.option3];
     self.option3.mParent = self;
     self.option3.mIndex = 0;
@@ -70,20 +80,17 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 15; //[fileThumbnails count];
-    
+    return [userList count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *myCell = [collectionView
-                                    dequeueReusableCellWithReuseIdentifier:@"AttendeeCell"
-                                    forIndexPath:indexPath];
+    ImageViewCell *myCell = [collectionView
+                             dequeueReusableCellWithReuseIdentifier:@"VotingAttendeeCell"
+                             forIndexPath:indexPath];
     
-    //NSString* path = fileThumbnails[indexPath.row];
-    //  UIImage *img = [UIImage imageNamed:@"Cell.png"];
-    
-    //  myCell.layer.contents = (id)img.CGImage;
+    NSString* path = userList[indexPath.row];
+    myCell.imageView.image = [UIImage imageNamed:path];
     
     return myCell;
 }
@@ -92,12 +99,12 @@
 {
     int x = indexPath.row;
     NSLog(@"%d", x);
-    if (x == 14) {
-//        AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
-//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
-//        [self presentViewController:nav animated:YES completion:^{
-//            
-//        }];
+    if (x == ([userList count] - 1)) {
+        AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
+        [self presentViewController:nav animated:YES completion:^{
+            
+        }];
     }
 }
 

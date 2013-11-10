@@ -26,7 +26,7 @@
                 for (int j = 0; j < posts.count; j++) {
                     NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
                     CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
-                    [cal setFrame:CGRectMake(90*j, 0, 90, 90)];
+                    [cal setFrame:CGRectMake(98*j, 0, 98, 98)];
                     [self addSubview:cal];
                     cal.mParent = self;
                     [cal setData:[posts objectAtIndex:j]];
