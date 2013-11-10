@@ -76,6 +76,7 @@
 		12BDAB0B182F3CCE00A61194 /* avatar3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB03182F3CCE00A61194 /* avatar3@2x.png */; };
 		12BDAB0C182F3CCE00A61194 /* avatar4.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB04182F3CCE00A61194 /* avatar4.png */; };
 		12BDAB0D182F3CCE00A61194 /* avatar4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB05182F3CCE00A61194 /* avatar4@2x.png */; };
+		12BDAB0F182F4C7100A61194 /* ga-outcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB0E182F4C7100A61194 /* ga-outcome.png */; };
 		12D1E1EB182DF7C1003E767E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EA182DF7C1003E767E /* Foundation.framework */; };
 		12D1E1ED182DF7C1003E767E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */; };
 		12D1E1EF182DF7C1003E767E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EE182DF7C1003E767E /* UIKit.framework */; };
@@ -250,6 +251,7 @@
 		12BDAB03182F3CCE00A61194 /* avatar3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar3@2x.png"; sourceTree = "<group>"; };
 		12BDAB04182F3CCE00A61194 /* avatar4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar4.png; sourceTree = "<group>"; };
 		12BDAB05182F3CCE00A61194 /* avatar4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar4@2x.png"; sourceTree = "<group>"; };
+		12BDAB0E182F4C7100A61194 /* ga-outcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ga-outcome.png"; sourceTree = "<group>"; };
 		12D1E1E7182DF7C1003E767E /* GatherBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D1E1EA182DF7C1003E767E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -505,6 +507,7 @@
 		12D1E1F1182DF7C1003E767E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				12BDAB0E182F4C7100A61194 /* ga-outcome.png */,
 				12BDAAFE182F3CCE00A61194 /* avatar1.png */,
 				12BDAAFF182F3CCE00A61194 /* avatar1@2x.png */,
 				12BDAB00182F3CCE00A61194 /* avatar2.png */,
@@ -794,6 +797,7 @@
 				12BDAAFC182F38F600A61194 /* type12.png in Resources */,
 				12D1E2A0182E429F003E767E /* arrow-left.png in Resources */,
 				12BDAAF2182F38F600A61194 /* type7.png in Resources */,
+				12BDAB0F182F4C7100A61194 /* ga-outcome.png in Resources */,
 				12D1E2A7182E429F003E767E /* image-holder.png in Resources */,
 				12D1E2AF182E429F003E767E /* step3@2x.png in Resources */,
 				12BDAA7D182EE3CD00A61194 /* green-bg@2x.png in Resources */,
