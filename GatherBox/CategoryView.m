@@ -9,6 +9,7 @@
 #import "CategoryView.h"
 #import "CategoryItem.h"
 #import "ActivityType.h"
+#import "AFNetworking/AFNetworking.h"
 
 @implementation CategoryView
 
@@ -18,20 +19,31 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
-
-        NSURLSessionTask *task = [ActivityType globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
-            if (!error) {
-                self.posts = posts;
+        
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        [manager GET:@"http://collect.im/api/activities/types.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            NSArray *postsFromResponse = [responseObject valueForKeyPath:@"data"];
+            NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
+            for (NSDictionary *attributes in postsFromResponse) {
                 
-                for (int j = 0; j < posts.count; j++) {
-                    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
-                    CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
-                    [cal setFrame:CGRectMake(98*j, 0, 98, 98)];
-                    [self addSubview:cal];
-                    cal.mParent = self;
-                    [cal setData:[posts objectAtIndex:j]];
-                }
+                ActivityType *post = [[ActivityType alloc] initWithAttributes:attributes];
+                
+                [mutablePosts addObject:post];
             }
+            
+            for (int j = 0; j < mutablePosts.count; j++) {
+                NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
+                CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
+                [cal setFrame:CGRectMake(98*j, 0, 98, 98)];
+                [self addSubview:cal];
+                cal.mParent = self;
+                [cal setData:[mutablePosts objectAtIndex:j]];
+            }
+            
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
         }];
         
     }

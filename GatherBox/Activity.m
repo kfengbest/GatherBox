@@ -44,10 +44,6 @@
             [mutablePosts addObject:post];
         }
         
-//        for (NSDictionary *attributes in postsFromResponse) {
-//            
-//
-//        }
         
         if (block) {
             block([NSArray arrayWithArray:mutablePosts], nil);

@@ -8,6 +8,7 @@
 
 #import "DashboardViewController.h"
 #import "Activity.h"
+#import "AFNetworking/AFNetworking.h"
 
 @implementation EventCell
 
@@ -40,12 +41,32 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSURLSessionTask *task = [Activity globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
-        if (!error) {
-            self.posts = posts;
-            [self.tableView reloadData];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://collect.im/api/activities.json?type=current" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *postsFromResponse = [responseObject valueForKeyPath:@"data"];
+        NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
+        for (int i = 0; i < [postsFromResponse count]; i++)
+        {
+            NSDictionary *attributes = [postsFromResponse objectAtIndex:i];
+            Activity *post = [[Activity alloc] initWithAttributes:attributes];
+            
+            int index = i % 5;
+            if (index == 0) {
+                index = 1;
+            }
+            NSString *string = [NSString stringWithFormat:@"avatar%d.png",index];
+            post.creator = string;
+            [mutablePosts addObject:post];
         }
+        
+        self.posts = mutablePosts;
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning

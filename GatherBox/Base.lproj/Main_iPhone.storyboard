@@ -317,7 +317,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="type1.png" translatesAutoresizingMaskIntoConstraints="NO" id="OZD-vM-6qL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image-holder.png" translatesAutoresizingMaskIntoConstraints="NO" id="OZD-vM-6qL">
                                 <rect key="frame" x="121" y="66" width="72" height="72"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -385,7 +385,7 @@
             </objects>
             <point key="canvasLocation" x="-1208" y="1353"/>
         </scene>
-        <!--View Report View Controller-->
+        <!--View Report View Controller - 投票结果-->
         <scene sceneID="KTz-L5-TB9">
             <objects>
                 <viewController id="nWP-dt-it5" customClass="ViewReportViewController" sceneMemberID="viewController">
@@ -398,7 +398,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AQF-hT-dT9"/>
+                    <navigationItem key="navigationItem" title="投票结果" id="AQF-hT-dT9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT2-M6-k1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -413,7 +413,6 @@
         <image name="line.png" width="540" height="1"/>
         <image name="scroll-bg.png" width="513" height="155"/>
         <image name="tab.png" width="270" height="97"/>
-        <image name="type1.png" width="108" height="108"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
