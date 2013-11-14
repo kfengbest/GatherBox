@@ -699,7 +699,7 @@
 				ORGANIZATIONNAME = "Kaven Feng";
 				TargetAttributes = {
 					12D1E1E6182DF7C1003E767E = {
-						DevelopmentTeam = 8KJGKN38LP;
+						DevelopmentTeam = 66XE799M3H;
 					};
 					12D1E20A182DF7C1003E767E = {
 						TestTargetID = 12D1E1E6182DF7C1003E767E;
@@ -1010,12 +1010,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Edward Yuen (RCQG9CH3B8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatherBox/GatherBox-Prefix.pch";
 				INFOPLIST_FILE = "GatherBox/GatherBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18309E47-51F7-4C36-931B-1F4739D2C3BA";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1025,12 +1026,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Midland Cybernet Limited";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatherBox/GatherBox-Prefix.pch";
 				INFOPLIST_FILE = "GatherBox/GatherBox-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18309E47-51F7-4C36-931B-1F4739D2C3BA";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -127,64 +127,29 @@
     int x = indexPath.row;
     NSLog(@"%d", x);
     if (x == ([userList count] - 1)) {
-//        AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
-//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
-//        [self presentViewController:nav animated:YES completion:^{
-//            
-//        }];
+        [self performSegueWithIdentifier:@"CreateActivity2AddFriends" sender:self];
     }
 }
 
 - (IBAction)publishActivity:(id)sender
 {
     
-//    NSString *pathStr=@"http://www.baidu.com" ;
+    AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
+
+    NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    [parameters setObject:@"B4" forKey:@"name"];
+    [parameters setObject:@"4" forKey:@"activity_type"];
+    [parameters setObject:@"2013-12-1" forKey:@"option1"];
+    [parameters setObject:@"2013-12-3" forKey:@"option2"];
+    [parameters setObject:@"2013-12-3" forKey:@"option3"];
+    [parameters setObject:@"k3" forKey:@"creator"];
+    [parameters setObject:@"u3" forKey:@"usernames"];
     
-//    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];//这里要将url设置为空
-//    
-//    httpClient.parameterEncoding = AFJSONParameterEncoding;
-//    
-//    [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
-//    
-//    
-//    NSMutableDictionary *params=[[NSMutableDictionary alloc] init];   // 要传递的json数据是一个字典
-//    
-//    [params setObject:UserID forKey:@"userId"];
-//    
-//    [params setObject:[self.contDic objectForKey:@"weiboId" ] forKey:@"operateId"];
-//    
-//    [params setObject:@"8d0ce196d0eafa27780cc3a7217de71d92474021dc0a4fc593d4f9b9eda320ca" forKey:@"key"];
-//    
-//    
-//    
-//    // httpClient 的postPath就是上文中的pathStr，即你要访问的URL地址，这里是向服务器提交一个数据请求，
-//    
-//    [httpClient postPath:pathStr parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        
-//        NSLog(@"data====%@",params);
-//        
-//        NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//        
-//        NSLog(@"Request Successful, response '%@'", responseStr);
-//        
-//        [responseStr release];
-//        
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        
-//        NSLog(@"[HTTPClient Error]: %@", error);
-    
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    //NSDictionary *parameters = @{@"foo": @"bar"};
-    NSDictionary *parameters = @{@"name": @"BBQQ3", @"activity_type": @"1", @"option1":@"2013-12-1", @"option2":@"2013-12-1", @"option3":@"2013-12-1", @"creator":@"sanvi",@"usernames":@"harryng"};
-    
-    [manager POST:@"http://http://collect.im/api/activities" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-    
-    
+    [manager POST:@"http://collect.im/api/activities" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"JSON: %@", responseObject);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Error: %@", error);
+        }];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

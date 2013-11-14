@@ -105,11 +105,7 @@
     int x = indexPath.row;
     NSLog(@"%d", x);
     if (x == ([userList count] - 1)) {
-//        AddFriendsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"AddFriendsViewController"];
-//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:modal];
-//        [self presentViewController:nav animated:YES completion:^{
-//            
-//        }];
+        [self performSegueWithIdentifier:@"Voting2AddFriends" sender:self];
     }
 }
 
