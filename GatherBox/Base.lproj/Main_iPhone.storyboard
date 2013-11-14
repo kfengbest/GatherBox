@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwI-su-5VS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="2027"/>
+            <point key="canvasLocation" x="-642" y="2040"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hiv-Um-buj">
@@ -396,26 +396,19 @@
                     <view key="view" contentMode="scaleToFill" id="ipn-kD-xz8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ga-outcome.png" translatesAutoresizingMaskIntoConstraints="NO" id="BSk-Bh-PGx">
-                                <rect key="frame" x="0.0" y="33" width="320" height="573"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="AQF-hT-dT9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT2-M6-k1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-748" y="1251"/>
+            <point key="canvasLocation" x="-642" y="1353"/>
         </scene>
     </scenes>
     <resources>
         <image name="add.png" width="109" height="109"/>
         <image name="bullet-selected.png" width="27" height="27"/>
         <image name="bullet.png" width="27" height="27"/>
-        <image name="ga-outcome.png" width="1080" height="1920"/>
         <image name="image-holder.png" width="218" height="218"/>
         <image name="line.png" width="540" height="1"/>
         <image name="scroll-bg.png" width="513" height="155"/>

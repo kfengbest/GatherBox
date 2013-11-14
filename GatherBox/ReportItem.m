@@ -15,20 +15,18 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        
-
-        
+    
     }
     return self;
 }
 
 -(void) initWithData
 {
-    int iconW = 90;
-    int iconH = 90;
+    int iconW = 80;
+    int iconH = 80;
     int num = 10;
     
-    self.mScrollView.contentSize = CGSizeMake(iconW * num,iconH * num);
+    self.mScrollView.contentSize = CGSizeMake(iconW * num,iconH);
 
     for (int i = 0; i < num; i++) {
         
