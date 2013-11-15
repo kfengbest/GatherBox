@@ -10,6 +10,7 @@
 #import "CategoryItem.h"
 #import "ActivityType.h"
 #import "AFNetworking/AFNetworking.h"
+#import "CreateVoteViewController.h"
 
 @implementation CategoryView
 
@@ -19,32 +20,25 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
-
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        [manager GET:@"http://collect.im/api/activities/types.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"JSON: %@", responseObject);
+        
+        NSMutableDictionary* dic = [ActivityType allTypes];
+        NSArray *mutablePosts = [dic allValues];
+        
+        int s_Width = 98;
+        int s_Height = 98;
+        
+        for (int i = 0; i < mutablePosts.count; i++) {
+            NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
+            CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
             
-            NSArray *postsFromResponse = [responseObject valueForKeyPath:@"data"];
-            NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
-            for (NSDictionary *attributes in postsFromResponse) {
-                
-                ActivityType *post = [[ActivityType alloc] initWithAttributes:attributes];
-                [mutablePosts addObject:post];
-            }
+            int dy = (int)(i/3);
+            int dx = (int)(i%3);
             
-            for (int j = 0; j < mutablePosts.count; j++) {
-                NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CategoryItem"owner:self options:nil];
-                CategoryItem * cal = (CategoryItem*)[nibView objectAtIndex:0];
-                [cal setFrame:CGRectMake(98*j, 0, 98, 98)];
-                [self addSubview:cal];
-                cal.mParent = self;
-                [cal setData:[mutablePosts objectAtIndex:j]];
-            }
-            
-            
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
-        }];
+            [cal setFrame:CGRectMake(s_Width*dx, s_Height*dy, s_Width, s_Height)];
+            [self addSubview:cal];
+            cal.mParent = self;
+            [cal setData:[mutablePosts objectAtIndex:i]];
+        }
         
     }
     return self;
@@ -66,4 +60,10 @@
     self.frame = CGRectMake(0, 600, 320, 480);
     [UIView commitAnimations];
 }
+
+-(void) selectItem : (CategoryItem*)item
+{
+    [self.mParent updateActivityType:item.mData];
+}
+
 @end

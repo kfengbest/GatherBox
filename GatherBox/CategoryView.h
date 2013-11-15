@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class CategoryItem;
+@class CreateVoteViewController;
+
 @interface CategoryView : UIView
 @property (nonatomic, strong) NSString* mSelectedItem;
-@property (readwrite, nonatomic, strong) NSArray *posts;
+@property (nonatomic, weak) CreateVoteViewController* mParent;
+
+-(void) selectItem : (CategoryItem*)item;
 @end

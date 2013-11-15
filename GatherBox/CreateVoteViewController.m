@@ -18,6 +18,7 @@
 #import "AFAppDotNetAPIClient.h"
 #import "Config.h"
 #import "ImageViewCell.h"
+#import "ActivityType.h"
 
 
 #define  PIC_WIDTH 80
@@ -33,9 +34,6 @@
 @end
 
 @implementation CreateVoteViewController
-
-@synthesize buttonWithImage;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,6 +68,7 @@
     
     mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 570, 320, 400)];
     [self.view addSubview:mCategoryView];
+    mCategoryView.mParent = self;
     
     mChooseDateTimeView = [[ChooseDateTimeView alloc] initWithFrame:CGRectMake(0, 570, 320, 300)];
     [self.view addSubview:mChooseDateTimeView];
@@ -88,7 +87,14 @@
     mCategoryView.frame = CGRectMake(0, 568-400, 320, 400);
     [UIView commitAnimations];
     
+}
 
+-(void) updateActivityType : (ActivityType*) type
+{
+    [self.mActivityTypeBtn setBackgroundImage:[UIImage imageNamed:type.imageUrl] forState:UIControlStateNormal];
+    [self.mActivityTypeBtn setBackgroundImage:[UIImage imageNamed:type.imageUrl] forState:UIControlStateSelected];
+  
+    self.mActivityTypeLabel.text = type.name;
 }
 
 - (void) clickOnCalendar: (NSInteger)index

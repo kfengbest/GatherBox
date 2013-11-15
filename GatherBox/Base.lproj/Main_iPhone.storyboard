@@ -299,6 +299,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mActivityTypeBtn" destination="rPr-kY-Px3" id="3Dx-NZ-pb0"/>
+                        <outlet property="mActivityTypeLabel" destination="29x-fO-UFd" id="cDT-sV-OAT"/>
                         <segue destination="jkM-A6-o3x" kind="modal" identifier="CreateActivity2AddFriends" id="m2x-l8-Lhu"/>
                     </connections>
                 </viewController>
@@ -423,6 +425,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yvO-dq-fuX"/>
+        <segue reference="m2x-l8-Lhu"/>
     </inferredMetricsTieBreakers>
 </document>

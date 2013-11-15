@@ -32,7 +32,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    self.mParent.mSelectedItem = self.mTitle.text;
+    [self.mParent selectItem:self];
 }
 
 -(void) setData : (ActivityType*)data

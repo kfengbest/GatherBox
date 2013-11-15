@@ -9,14 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+@class ActivityType;
+
 @interface CreateVoteViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
     NSMutableArray *addedPicArray;
 }
-@property (nonatomic, strong) UIButton *buttonWithImage;
+@property (strong, nonatomic) IBOutlet UIButton *mActivityTypeBtn;
+@property (strong, nonatomic) IBOutlet UILabel *mActivityTypeLabel;
 
 - (IBAction)selectCategory:(id)sender;
 - (IBAction)publishActivity:(id)sender;
 - (void) clickOnCalendar: (NSInteger)index;
+-(void) updateActivityType : (ActivityType*) type;
 
 @end
