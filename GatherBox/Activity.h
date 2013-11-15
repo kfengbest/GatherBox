@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class User;
+
 @interface Activity : NSObject
 @property (nonatomic, assign) NSUInteger type;
-@property (nonatomic, strong) NSString* guid;
+@property (nonatomic, strong) NSString* oid;
 @property (nonatomic, strong) NSString* name;
-@property (nonatomic, strong) NSString* creator;
+@property (nonatomic, strong) User* creator;
 @property (readwrite, nonatomic, strong) NSMutableArray* options;
 @property (readwrite, nonatomic, strong) NSMutableArray* users;
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
-+ (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block;
+- (void)loadDetail;
 
 @end

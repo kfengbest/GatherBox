@@ -15,6 +15,11 @@
     if (!self) {
         return nil;
     }
+    if (!attributes) {
+        self.userId = @"DefaultID";
+        self.displayName = @"DefaultName";
+        return self;
+    }
     
     self.userId = [attributes valueForKeyPath:@"username"];
     self.displayName = [attributes valueForKeyPath:@"name"];

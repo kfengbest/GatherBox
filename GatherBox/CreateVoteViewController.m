@@ -64,7 +64,7 @@
         [cal setFrame:CGRectMake(98*j, 165, 98, 194)];
         [self.view addSubview:cal];
         cal.mParent = self;
-        cal.mIndex = j;
+        cal.mIndex = j+1;
         [cal setDate: [NSDate date]];
     }
     

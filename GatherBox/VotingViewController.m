@@ -18,6 +18,7 @@
 @end
 
 @implementation VotingViewController
+@synthesize data;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

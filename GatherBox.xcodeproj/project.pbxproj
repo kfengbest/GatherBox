@@ -78,6 +78,8 @@
 		12BDAB0D182F3CCE00A61194 /* avatar4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB05182F3CCE00A61194 /* avatar4@2x.png */; };
 		12BDAB0F182F4C7100A61194 /* ga-outcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB0E182F4C7100A61194 /* ga-outcome.png */; };
 		12BDAB11182F539300A61194 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAB10182F539300A61194 /* logo.png */; };
+		12C13A791835C508006B5AFE /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C13A781835C508006B5AFE /* Option.m */; };
+		12C13A7C1835DF12006B5AFE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C13A7B1835DF12006B5AFE /* Utils.m */; };
 		12D1E1EB182DF7C1003E767E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EA182DF7C1003E767E /* Foundation.framework */; };
 		12D1E1ED182DF7C1003E767E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */; };
 		12D1E1EF182DF7C1003E767E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1E1EE182DF7C1003E767E /* UIKit.framework */; };
@@ -218,8 +220,8 @@
 		12BDAAC3182F143300A61194 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		12BDAAC5182F144000A61194 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		12BDAAC6182F144000A61194 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		12BDAACB182F170F00A61194 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
-		12BDAACC182F170F00A61194 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
+		12BDAACB182F170F00A61194 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFAppDotNetAPIClient.h; path = ../AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
+		12BDAACC182F170F00A61194 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFAppDotNetAPIClient.m; path = ../AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
 		12BDAACE182F38F600A61194 /* type1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type1.png; sourceTree = "<group>"; };
 		12BDAACF182F38F600A61194 /* type1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "type1@2x.png"; sourceTree = "<group>"; };
 		12BDAAD0182F38F600A61194 /* type2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type2.png; sourceTree = "<group>"; };
@@ -254,6 +256,10 @@
 		12BDAB05182F3CCE00A61194 /* avatar4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar4@2x.png"; sourceTree = "<group>"; };
 		12BDAB0E182F4C7100A61194 /* ga-outcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ga-outcome.png"; sourceTree = "<group>"; };
 		12BDAB10182F539300A61194 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		12C13A771835C508006B5AFE /* Option.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Option.h; sourceTree = "<group>"; };
+		12C13A781835C508006B5AFE /* Option.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Option.m; sourceTree = "<group>"; };
+		12C13A7A1835DF12006B5AFE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		12C13A7B1835DF12006B5AFE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		12D1E1E7182DF7C1003E767E /* GatherBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GatherBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D1E1EA182DF7C1003E767E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12D1E1EC182DF7C1003E767E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -395,6 +401,8 @@
 		12BDAAA6182F0D2E00A61194 /* UIKit+AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				12BDAACB182F170F00A61194 /* AFAppDotNetAPIClient.h */,
+				12BDAACC182F170F00A61194 /* AFAppDotNetAPIClient.m */,
 				12BDAAA7182F0D2E00A61194 /* AFNetworkActivityIndicatorManager.h */,
 				12BDAAA8182F0D2E00A61194 /* AFNetworkActivityIndicatorManager.m */,
 				12BDAAA9182F0D2E00A61194 /* UIActivityIndicatorView+AFNetworking.h */,
@@ -423,6 +431,8 @@
 				12BDAAC3182F143300A61194 /* Activity.m */,
 				12BDAAC5182F144000A61194 /* User.h */,
 				12BDAAC6182F144000A61194 /* User.m */,
+				12C13A771835C508006B5AFE /* Option.h */,
+				12C13A781835C508006B5AFE /* Option.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -472,8 +482,6 @@
 				12D1E1FA182DF7C1003E767E /* AppDelegate.m */,
 				12D1E1FC182DF7C1003E767E /* Main_iPhone.storyboard */,
 				12D1E1FF182DF7C1003E767E /* Main_iPad.storyboard */,
-				12BDAACB182F170F00A61194 /* AFAppDotNetAPIClient.h */,
-				12BDAACC182F170F00A61194 /* AFAppDotNetAPIClient.m */,
 				12D1E202182DF7C1003E767E /* ViewController.h */,
 				12D1E203182DF7C1003E767E /* ViewController.m */,
 				12D1E205182DF7C1003E767E /* Images.xcassets */,
@@ -502,6 +510,8 @@
 				12BDAA83182EE48F00A61194 /* ReportItem.h */,
 				12BDAA84182EE48F00A61194 /* ReportItem.m */,
 				12BDAABD182F105B00A61194 /* Config.h */,
+				12C13A7A1835DF12006B5AFE /* Utils.h */,
+				12C13A7B1835DF12006B5AFE /* Utils.m */,
 			);
 			path = GatherBox;
 			sourceTree = "<group>";
@@ -834,6 +844,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C13A7C1835DF12006B5AFE /* Utils.m in Sources */,
+				12C13A791835C508006B5AFE /* Option.m in Sources */,
 				12BDAAC7182F144000A61194 /* User.m in Sources */,
 				12D1E226182DF86B003E767E /* ImageViewCell.m in Sources */,
 				12BDAAA0182F0D2500A61194 /* AFNetworkReachabilityManager.m in Sources */,

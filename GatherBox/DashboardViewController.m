@@ -9,6 +9,7 @@
 #import "DashboardViewController.h"
 #import "Activity.h"
 #import "AFNetworking/AFNetworking.h"
+#import "VotingViewController.h"
 
 @implementation EventCell
 
@@ -112,5 +113,15 @@
     self.mIndicatorImage.frame = CGRectMake(0, 61, 160, 65);
     [UIView commitAnimations];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"Dashboard2Voting"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSLog(@"%d", indexPath.row);
+        
+        VotingViewController* vc = (VotingViewController*)[segue destinationViewController];
+        vc.data = self.posts[indexPath.row];
+    }}
 
 @end

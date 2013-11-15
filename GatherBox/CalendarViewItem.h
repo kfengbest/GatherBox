@@ -18,6 +18,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *mWeek;
 @property (nonatomic, strong) IBOutlet UILabel *mTime;
 @property (nonatomic, strong) CreateVoteViewController* mParent;
+@property (nonatomic, strong) NSDate* mDate;
 @property (nonatomic) NSInteger mIndex;
 @property (nonatomic) bool bVotingMode;
 @property (nonatomic) bool bTicked;

@@ -8,51 +8,46 @@
 
 #import "Activity.h"
 #import "AFNetworking/AFNetworking.h"
-#import "AFAppDotNetAPIClient.h"
 #import "Config.h"
+#import "User.h"
 
 @implementation Activity
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes {
+    
     self = [super init];
     if (!self) {
         return nil;
     }
     
-    //self.type = [[attributes valueForKeyPath:@"activity_type"] integerValue];
+    self.type = [[attributes valueForKeyPath:@"activity_type"] integerValue];
     self.name = [attributes valueForKeyPath:@"name"];
-    self.guid = [attributes valueForKeyPath:@"guid"];
-    self.creator = [attributes valueForKeyPath:@"creator"];
-    
+    self.oid = [[attributes valueForKeyPath:@"id"] valueForKeyPath:@"$oid"];
+    User* user = [[User alloc] initWithAttributes:[attributes valueForKeyPath:@"creator"]];
+    self.creator = user;
+
     return self;
 }
 
-+ (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block {
-    return [[AFAppDotNetAPIClient sharedClient] GET:@"/api/activities.json?type=current" parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
-        NSArray *postsFromResponse = [JSON valueForKeyPath:@"data"];
-        NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
-        for (int i = 0; i < [postsFromResponse count]; i++) {
-            NSDictionary *attributes = [postsFromResponse objectAtIndex:i];
-            Activity *post = [[Activity alloc] initWithAttributes:attributes];
-            
-            int index = i % 5;
-            if (index == 0) {
-                index = 1;
-            }
-            NSString *string = [NSString stringWithFormat:@"avatar%d.png",index];
-            post.creator = string;
-            [mutablePosts addObject:post];
+- (void)loadDetail
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString* url = [NSString stringWithFormat:@"http://collect.im/api/activities/show.json?id=%@",self.oid];
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *postsFromResponse = [responseObject valueForKeyPath:@"data"];
+        NSArray* options = [postsFromResponse valueForKeyPath:@"options"];
+        
+        NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:[options count]];
+        for (int i = 0; i < [options count]; i++)
+        {
+
         }
         
-        
-        if (block) {
-            block([NSArray arrayWithArray:mutablePosts], nil);
-        }
-    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
-        if (block) {
-            block([NSArray array], error);
-        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
     }];
 }
+
 
 @end
