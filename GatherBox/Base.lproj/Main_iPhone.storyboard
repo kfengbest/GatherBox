@@ -379,6 +379,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activeTypeLabel" destination="zVc-av-ebV" id="s46-1d-Ku2"/>
+                        <outlet property="activityTypeImg" destination="OZD-vM-6qL" id="cuH-qE-2Az"/>
                         <segue destination="jkM-A6-o3x" kind="modal" identifier="Voting2AddFriends" id="yvO-dq-fuX"/>
                     </connections>
                 </viewController>
@@ -421,6 +423,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="m2x-l8-Lhu"/>
+        <segue reference="yvO-dq-fuX"/>
     </inferredMetricsTieBreakers>
 </document>

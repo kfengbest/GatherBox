@@ -10,6 +10,7 @@
 #import "Activity.h"
 #import "AFNetworking/AFNetworking.h"
 #import "VotingViewController.h"
+#import "ActivityType.h"
 
 @implementation EventCell
 
@@ -68,6 +69,8 @@
         NSLog(@"Error: %@", error);
     }];
     
+    // load activity types.
+    [ActivityType allTypes];
 }
 
 - (void)didReceiveMemoryWarning

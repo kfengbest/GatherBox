@@ -10,6 +10,8 @@
 #import "CalendarViewItem.h"
 #import "ImageViewCell.h"
 #import "AddFriendsViewController.h"
+#import "ActivityType.h"
+#import "Activity.h"
 
 @interface VotingViewController ()
 {
@@ -56,7 +58,6 @@
     [self.view addSubview: self.option2];
     self.option2.mParent = self;
     self.option2.bVotingMode = true;
-
     self.option2.mIndex = 2;
     [self.option2 setDate: [NSDate date]];
     
@@ -66,9 +67,12 @@
     [self.view addSubview: self.option3];
     self.option3.mParent = self;
     self.option3.bVotingMode = true;
-
     self.option3.mIndex = 3;
     [self.option3 setDate: [NSDate date]];
+    
+    ActivityType* typeActivity = [ActivityType getActivityType:[NSString stringWithFormat:@"%d",self.data.type]];
+    self.activityTypeImg.image = [UIImage imageNamed:typeActivity.imageUrl];
+    self.activeTypeLabel.text = typeActivity.name;
     
 }
 

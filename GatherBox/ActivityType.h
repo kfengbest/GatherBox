@@ -16,4 +16,6 @@
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
++ (NSMutableDictionary*) allTypes;
++ (ActivityType*) getActivityType : (NSString*) type;
 @end

@@ -19,16 +19,16 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor whiteColor];
-        
+
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         [manager GET:@"http://collect.im/api/activities/types.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"JSON: %@", responseObject);
             
             NSArray *postsFromResponse = [responseObject valueForKeyPath:@"data"];
             NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
             for (NSDictionary *attributes in postsFromResponse) {
                 
                 ActivityType *post = [[ActivityType alloc] initWithAttributes:attributes];
-                
                 [mutablePosts addObject:post];
             }
             
