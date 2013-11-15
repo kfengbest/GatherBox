@@ -12,6 +12,8 @@
 #import "AddFriendsViewController.h"
 #import "ActivityType.h"
 #import "Activity.h"
+#import "AFNetworking/AFNetworking.h"
+#import "Option.h"
 
 @interface VotingViewController ()
 {
@@ -36,6 +38,57 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString* url = [NSString stringWithFormat:@"http://collect.im/api/activities/show.json?id=%@",self.data.oid];
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        // Load data
+        NSDictionary *postsFromResponse = [responseObject valueForKeyPath:@"data"];
+        NSArray* options = [postsFromResponse valueForKeyPath:@"options"];
+        NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:[options count]];
+        for (int i = 0; i < [options count]; i++)
+        {
+            NSDictionary *attributes = [options objectAtIndex:i];
+            Option *opt = [[Option alloc] initWithAttributes:attributes];
+            [mutableOptions addObject:opt];
+        }
+        
+        // Display in UI
+        NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+        self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
+        [self.option1 setFrame:CGRectMake(10, 180, 98, 194)];
+        [self.view addSubview: self.option1];
+        self.option1.mParent = self;
+        self.option1.mIndex = 1;
+        self.option1.bVotingMode = true;
+        
+        Option* opt1 = [mutableOptions objectAtIndex:0];
+        [self.option1 setDate: opt1.time];
+        
+        NSArray* nibView2 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+        self.option2 = (CalendarViewItem*)[nibView2 objectAtIndex:0];
+        [self.option2 setFrame:CGRectMake(10 + 98, 180, 98, 194)];
+        [self.view addSubview: self.option2];
+        self.option2.mParent = self;
+        self.option2.bVotingMode = true;
+        self.option2.mIndex = 2;
+        Option* opt2 = [mutableOptions objectAtIndex:1];
+        [self.option2 setDate: opt2.time];
+        
+        NSArray* nibView3 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
+        self.option3 = (CalendarViewItem*)[nibView3 objectAtIndex:0];
+        [self.option3 setFrame:CGRectMake(10 + 98 * 2, 180, 98, 194)];
+        [self.view addSubview: self.option3];
+        self.option3.mParent = self;
+        self.option3.bVotingMode = true;
+        self.option3.mIndex = 3;
+        Option* opt3 = [mutableOptions objectAtIndex:2];
+        [self.option3 setDate: opt3.time];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+    
     userList = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 4; i++) {
         NSString *string = [NSString stringWithFormat:@"avatar%d.png",i];
@@ -43,33 +96,7 @@
     }
     [userList addObject:@"add.png"];
     
-    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
-    self.option1 = (CalendarViewItem*)[nibView objectAtIndex:0];
-    [self.option1 setFrame:CGRectMake(10, 180, 98, 194)];
-    [self.view addSubview: self.option1];
-    self.option1.mParent = self;
-    self.option1.mIndex = 1;
-    self.option1.bVotingMode = true;
-    [self.option1 setDate: [NSDate date]];
-    
-    NSArray* nibView2 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
-    self.option2 = (CalendarViewItem*)[nibView2 objectAtIndex:0];
-    [self.option2 setFrame:CGRectMake(10 + 98, 180, 98, 194)];
-    [self.view addSubview: self.option2];
-    self.option2.mParent = self;
-    self.option2.bVotingMode = true;
-    self.option2.mIndex = 2;
-    [self.option2 setDate: [NSDate date]];
-    
-    NSArray* nibView3 =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
-    self.option3 = (CalendarViewItem*)[nibView3 objectAtIndex:0];
-    [self.option3 setFrame:CGRectMake(10 + 98 * 2, 180, 98, 194)];
-    [self.view addSubview: self.option3];
-    self.option3.mParent = self;
-    self.option3.bVotingMode = true;
-    self.option3.mIndex = 3;
-    [self.option3 setDate: [NSDate date]];
-    
+
     ActivityType* typeActivity = [ActivityType getActivityType:[NSString stringWithFormat:@"%d",self.data.type]];
     self.activityTypeImg.image = [UIImage imageNamed:typeActivity.imageUrl];
     self.activeTypeLabel.text = typeActivity.name;

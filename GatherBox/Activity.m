@@ -10,6 +10,7 @@
 #import "AFNetworking/AFNetworking.h"
 #import "Config.h"
 #import "User.h"
+#import "Option.h"
 
 @implementation Activity
 
@@ -41,7 +42,9 @@
         NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:[options count]];
         for (int i = 0; i < [options count]; i++)
         {
-
+            NSDictionary *attributes = [options objectAtIndex:i];
+            Option *opt = [[Option alloc] initWithAttributes:attributes];
+            [mutableOptions addObject:opt];
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

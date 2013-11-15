@@ -140,4 +140,15 @@
     return month;
 }
 
++(NSDate *)dateFromString:(NSString *)dateString{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    
+    NSDate *destDate= [dateFormatter dateFromString:dateString];
+    
+    return destDate;
+    
+}
+
 @end

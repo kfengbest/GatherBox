@@ -7,6 +7,7 @@
 //
 
 #import "Option.h"
+#import "Utils.h"
 
 @implementation Option
 
@@ -16,8 +17,9 @@
         return nil;
     }
     
-    self.oid = [attributes valueForKeyPath:@"oid"];
-    //self.time = [attributes valueForKeyPath:@"name"];
+    self.oid = [[attributes valueForKeyPath:@"id"] valueForKeyPath:@"$oid"];
+    self.time = [Utils dateFromString:[attributes valueForKeyPath:@"option"]];
+    
     return self;
 }
 
