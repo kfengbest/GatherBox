@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class CreateVoteViewController;
+
 @interface ChooseDateTimeView : UIView
+@property (strong, nonatomic) IBOutlet UIButton *mOKButton;
+@property (strong, nonatomic) IBOutlet UIButton *mRightButton;
+@property (strong, nonatomic) IBOutlet UIButton *mLeftButton;
+@property (strong, nonatomic) IBOutlet UIDatePicker *mDateControl;
+@property (nonatomic, strong) CreateVoteViewController* mParent;
+@property (nonatomic) NSInteger mIndex;
+
+- (IBAction)onOKClicked:(id)sender;
+- (IBAction)onRightClicked:(id)sender;
+- (IBAction)onLeftClicked:(id)sender;
 
 @end

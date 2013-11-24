@@ -10,10 +10,10 @@
 #import <QuartzCore/QuartzCore.h>
 
 @class ActivityType;
+@class CalendarViewItem;
 
 @interface CreateVoteViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
-    NSMutableArray *addedPicArray;
 }
 @property (strong, nonatomic) IBOutlet UIButton *mActivityTypeBtn;
 @property (strong, nonatomic) IBOutlet UILabel *mActivityTypeLabel;
@@ -21,6 +21,8 @@
 - (IBAction)selectCategory:(id)sender;
 - (IBAction)publishActivity:(id)sender;
 - (void) clickOnCalendar: (NSInteger)index;
+-(void) setDatetime : (NSInteger)index withDate : (NSDate*) date;
+
 -(void) updateActivityType : (ActivityType*) type;
 
 @end

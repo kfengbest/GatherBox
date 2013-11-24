@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		125B114E1841A80700212927 /* ChooseDateTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125B114D1841A80700212927 /* ChooseDateTime.xib */; };
 		12BDAA65182EA0C400A61194 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA64182EA0C400A61194 /* DashboardViewController.m */; };
 		12BDAA68182EA68700A61194 /* VotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BDAA67182EA68700A61194 /* VotingViewController.m */; };
 		12BDAA6A182EE0E300A61194 /* ReportItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12BDAA69182EE0E300A61194 /* ReportItem.xib */; };
@@ -158,6 +159,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		125B114D1841A80700212927 /* ChooseDateTime.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseDateTime.xib; sourceTree = "<group>"; };
 		12BDAA63182EA0C400A61194 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		12BDAA64182EA0C400A61194 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		12BDAA66182EA68700A61194 /* VotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotingViewController.h; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				12D1E2B5182E48BE003E767E /* CalendarViewItem.m */,
 				12D1E2CF182E6047003E767E /* ChooseDateTimeView.h */,
 				12D1E2D0182E6047003E767E /* ChooseDateTimeView.m */,
+				125B114D1841A80700212927 /* ChooseDateTime.xib */,
 				12D1E2B2182E46BF003E767E /* CalendarView.xib */,
 				12D1E27C182E209E003E767E /* CategoryView.h */,
 				12D1E27D182E209E003E767E /* CategoryView.m */,
@@ -799,6 +802,7 @@
 				12BDAA81182EE3CD00A61194 /* grey-bg.png in Resources */,
 				12D1E2C4182E4EDA003E767E /* bullet-selected@2x.png in Resources */,
 				12BDAB08182F3CCE00A61194 /* avatar2.png in Resources */,
+				125B114E1841A80700212927 /* ChooseDateTime.xib in Resources */,
 				12D1E2CA182E4EDA003E767E /* step1-selected@2x.png in Resources */,
 				12BDAAEA182F38F600A61194 /* type3.png in Resources */,
 				12BDAAEB182F38F600A61194 /* type3@2x.png in Resources */,

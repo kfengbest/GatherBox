@@ -30,6 +30,7 @@
     CategoryView*   mCategoryView;
     ChooseDateTimeView * mChooseDateTimeView;
     NSMutableArray* userList;
+    NSMutableArray* options;
 }
 @end
 
@@ -55,6 +56,7 @@
         [userList addObject:string];
     }
     [userList addObject:@"add.png"];
+    options = [[NSMutableArray alloc] init];
     
     for (int j = 0; j < 3; j++) {
         NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CalendarView"owner:self options:nil];
@@ -64,13 +66,16 @@
         cal.mParent = self;
         cal.mIndex = j+1;
         [cal setDate: [NSDate date]];
+        [options addObject:cal];
     }
     
     mCategoryView = [[CategoryView alloc] initWithFrame:CGRectMake(0, 570, 320, 400)];
     [self.view addSubview:mCategoryView];
     mCategoryView.mParent = self;
     
-    mChooseDateTimeView = [[ChooseDateTimeView alloc] initWithFrame:CGRectMake(0, 570, 320, 300)];
+    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"ChooseDateTime"owner:self options:nil];
+    mChooseDateTimeView = (ChooseDateTimeView*)[nibView objectAtIndex:0];
+    [mChooseDateTimeView setFrame:CGRectMake(0, 570, 320, 300)];
     [self.view addSubview:mChooseDateTimeView];
 }
 
@@ -102,7 +107,15 @@
     [UIView beginAnimations:@"ShowTime" context:nil];
     [UIView setAnimationDuration:0.5];
     mChooseDateTimeView.frame = CGRectMake(0, 568-250, 320, 250);
+    mChooseDateTimeView.mParent = self;
+    mChooseDateTimeView.mIndex = index;
     [UIView commitAnimations];
+}
+
+-(void) setDatetime : (NSInteger)index withDate : (NSDate*) date
+{
+    CalendarViewItem* item = [options objectAtIndex:index -1];
+    [item setDate:date];
 }
 
 -(NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
