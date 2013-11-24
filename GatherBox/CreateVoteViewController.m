@@ -19,7 +19,8 @@
 #import "Config.h"
 #import "ImageViewCell.h"
 #import "ActivityType.h"
-
+#import "Activity.h"
+#import "Utils.h"
 
 #define  PIC_WIDTH 80
 #define  PIC_HEIGHT 80
@@ -31,6 +32,8 @@
     ChooseDateTimeView * mChooseDateTimeView;
     NSMutableArray* userList;
     NSMutableArray* options;
+    Activity* mActivity;
+    
 }
 @end
 
@@ -49,6 +52,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    mActivity = [[Activity alloc] init];
     
     userList = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 4; i++) {
@@ -94,12 +99,15 @@
     
 }
 
--(void) updateActivityType : (ActivityType*) type
+-(void) updateActivityType : (ActivityType*) activityType
 {
-    [self.mActivityTypeBtn setBackgroundImage:[UIImage imageNamed:type.imageUrl] forState:UIControlStateNormal];
-    [self.mActivityTypeBtn setBackgroundImage:[UIImage imageNamed:type.imageUrl] forState:UIControlStateSelected];
+    [self.mActivityTypeBtn setBackgroundImage:[UIImage imageNamed:activityType.imageUrl] forState:UIControlStateNormal];
+    [self.mActivityTypeBtn setBackgroundImage:[UIImage imageNamed:activityType.imageUrl] forState:UIControlStateSelected];
   
-    self.mActivityTypeLabel.text = type.name;
+    mActivity.type = activityType.type;
+    mActivity.name = activityType.name;
+    
+    self.mActivityTypeLabel.text = activityType.name;
 }
 
 - (void) clickOnCalendar: (NSInteger)index
@@ -152,15 +160,13 @@
 
 - (IBAction)publishActivity:(id)sender
 {
-    
     AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
-
     NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
-    [parameters setObject:@"B4" forKey:@"name"];
-    [parameters setObject:@"4" forKey:@"activity_type"];
-    [parameters setObject:@"2013-12-1" forKey:@"option1"];
-    [parameters setObject:@"2013-12-3" forKey:@"option2"];
-    [parameters setObject:@"2013-12-3" forKey:@"option3"];
+    [parameters setObject:mActivity.name forKey:@"name"];
+    [parameters setObject:[NSString stringWithFormat:@"%d",mActivity.type] forKey:@"activity_type"];
+    [parameters setObject:[Utils stringFromDate: ((CalendarViewItem*)[options objectAtIndex:0]).mDate] forKey:@"option1"];
+    [parameters setObject:[Utils stringFromDate: ((CalendarViewItem*)[options objectAtIndex:1]).mDate] forKey:@"option2"];
+    [parameters setObject:[Utils stringFromDate: ((CalendarViewItem*)[options objectAtIndex:2]).mDate] forKey:@"option3"];
     [parameters setObject:@"k3" forKey:@"creator"];
     [parameters setObject:@"u3" forKey:@"usernames"];
     

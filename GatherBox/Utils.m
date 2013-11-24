@@ -151,4 +151,13 @@
     
 }
 
++(NSString*) stringFromDate : (NSDate*)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    NSString *destDateString = [dateFormatter stringFromDate:date];
+    return destDateString;
+}
+
+
 @end

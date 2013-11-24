@@ -15,6 +15,7 @@
 +(NSString *)getDay:(NSDate*)date;
 +(NSString *)getMonth:(NSDate*)date;
 +(NSDate *)dateFromString:(NSString *)dateString;
++(NSString*) stringFromDate : (NSDate*) date;
 
 @end
 

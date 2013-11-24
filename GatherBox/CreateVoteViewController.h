@@ -23,6 +23,6 @@
 - (void) clickOnCalendar: (NSInteger)index;
 -(void) setDatetime : (NSInteger)index withDate : (NSDate*) date;
 
--(void) updateActivityType : (ActivityType*) type;
+-(void) updateActivityType : (ActivityType*) activityType;
 
 @end

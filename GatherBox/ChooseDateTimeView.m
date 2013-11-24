@@ -22,27 +22,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-    
-//        self.backgroundColor = [UIColor whiteColor];
-//        mDatePicker = [ [ UIDatePicker alloc] initWithFrame:CGRectMake(0.0,0.0,300,200)];
-//        [self addSubview:mDatePicker];
-//        
-//        NSDate* minDate = [NSDate date];
-//        NSDate* maxDate = [NSDate date];
-//        
-//        mDatePicker.minimumDate = minDate;
-//        mDatePicker.maximumDate = maxDate;
-//        mDatePicker.minuteInterval = 15;
-//        
-//        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//        btn.frame = CGRectMake(80, 210, 150, 50);
-//        [self addSubview:btn];
-//        
-//        [btn setTitle:@"Done" forState:UIControlStateNormal];
-//        [btn setTitle:@"Done" forState:UIControlStateHighlighted];
-//        [btn addTarget:self action:@selector(onOK:) forControlEvents:UIControlEventTouchUpInside];
-
-
     }
     return self;
 }
