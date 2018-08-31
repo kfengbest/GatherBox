@@ -13,11 +13,13 @@
 #import "ActivityType.h"
 #import "Activity.h"
 #import "AFNetworking/AFNetworking.h"
+#import "Config.h"
 #import "Option.h"
 
 @interface VotingViewController ()
 {
     NSMutableArray* userList;
+    NSMutableArray *mutableOptions;
 }
 @end
 
@@ -45,7 +47,7 @@
         // Load data
         NSDictionary *postsFromResponse = [responseObject valueForKeyPath:@"data"];
         NSArray* options = [postsFromResponse valueForKeyPath:@"options"];
-        NSMutableArray *mutableOptions = [NSMutableArray arrayWithCapacity:[options count]];
+        mutableOptions = [NSMutableArray arrayWithCapacity:[options count]];
         for (int i = 0; i < [options count]; i++)
         {
             NSDictionary *attributes = [options objectAtIndex:i];
@@ -103,6 +105,8 @@
     
 }
 
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -141,5 +145,21 @@
     }
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
+    NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    [parameters setObject:self.data.oid forKey:@"activity_id"];
+    [parameters setObject:@"kaven" forKey:@"username"];
+    [parameters setObject:@"kaven" forKey:@"options"];
+    
+    
+    [manager POST:@"http://collect.im/api/activities/vote" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
 
 @end

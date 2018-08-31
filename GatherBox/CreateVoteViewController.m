@@ -15,7 +15,6 @@
 #import "ChooseDateTimeView.h"
 
 #import "AFNetworking/AFNetworking.h"
-#import "AFAppDotNetAPIClient.h"
 #import "Config.h"
 #import "ImageViewCell.h"
 #import "ActivityType.h"

@@ -43,6 +43,48 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
+//    AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/html",nil];
+//    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+//    manager.securityPolicy.allowInvalidCertificates = YES;
+//    
+//    [manager.requestSerializer setValue:@"OAuth oauth_signature_method=\"HMAC-SHA1\",oauth_version=\"1.0\",oauth_nonce=\"mnxT96\",oauth_timestamp=\"1385517611\",oauth_consumer_key=\"40e8169d-72eb-4875-bdd6-210822dcfd18\",oauth_token=\"ZBCZ%2BXcwZWnnN88Nd2JRiMeICO4%3D\",oauth_signature=\"OldNwg2qutcRtpDbqTXQTW72rFA%3D\"" forHTTPHeaderField:@"Authorization"];
+//    
+//    [manager GET:@"https://qa2376.autodeskplm.com/api/rest/v1/workspaces/1/items" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+//        
+//        NSDictionary* dic = (NSDictionary*)responseObject;
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+//    
+//    
+    
+    
+//    NSURL *url = [NSURL URLWithString:@"https://qa2376.autodeskplm.com/api/rest/v1/workspaces/1/items/1966/attachments/2357/downloadEditableContent"];
+//    
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//    [request setValue:@"OAuth oauth_signature_method=\"HMAC-SHA1\",oauth_version=\"1.0\",oauth_nonce=\"lBNsRr\",oauth_timestamp=\"1385523330\",oauth_consumer_key=\"40e8169d-72eb-4875-bdd6-210822dcfd18\",oauth_token=\"ZBCZ%2BXcwZWnnN88Nd2JRiMeICO4%3D\",oauth_signature=\"635v5JNwrgxsJ1aRSO0zhEgLHFY%3D\"" forHTTPHeaderField:@"Authorization"];
+//    
+//    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"A.f3d"];
+//    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+//    
+//    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"Successfully downloaded file to %@", path);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+//    
+//    
+//    [operation start];
+    
+     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"http://collect.im/api/activities.json?type=current" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -71,6 +113,7 @@
     
     // load activity types.
     [ActivityType allTypes];
+    
 }
 
 - (void)didReceiveMemoryWarning
